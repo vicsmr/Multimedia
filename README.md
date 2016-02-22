@@ -2,6 +2,6 @@
 Trabajo colaborativo en Desarrollo de Aplicaciones Web (2015-2016)
 
 Integrantes:
-* Alvaro Parras Gomez -  
+* Alvaro Parras Gomez -  a.parrasg@alumnos.urjc.es - aparrasg
 * Victor Sanchez Muñoz - v.sanchezmu@alumnos.urjc.es - vicsmr
 * Fernando Lopez Nieto - f.lopezn@alumnos.urjc.es - flopezn11
