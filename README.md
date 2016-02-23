@@ -3,16 +3,17 @@ Trabajo colaborativo en Desarrollo de Aplicaciones Web (2015-2016)
 
 Idea: 
 Gestión de una liga de futbol municipal
-* Login
+* Login (3)
 * Clasificacion
-* Información de cada equipo
-* Información de cada jugador
-* Calendario
+* Información de cada equipo (1)
+* Información de cada jugador (2)
+* Calendario (4)
 * Tienda
+* seccion de fotos, comentarios sobre los arbitros (cronicas) (5)
 
 Parte privada:
 * Comprar en la tienda
-* Administrar los equipos que consta de: añadir jugadores, eliminar jugadores, aplazar partidos, ponerse en contacto con la organizacion
+* Administrar los equipos que consta de: añadir jugadores, eliminar jugadores, aplazar partidos (gestor de cada equipo y un gestor global)
 
 
 Integrantes:
