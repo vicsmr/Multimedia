@@ -1,0 +1,101 @@
+body {
+    margin: 10px;
+}
+
+#principal {
+    height: auto;
+    margin: auto;
+    border-radius: 4px;
+    padding: 0px;
+}
+
+#cabecera {
+    height: 160px;
+    width: 100%;
+}
+
+#cabecera1 {
+    height: 120px;
+    background-color: #f8c143;
+    box-shadow: 2px 2px 5px #999;
+    text-align: center;
+}
+
+#cabecera1>span {
+    position: relative;
+    right: 10px;
+    top: 10px;
+    font-size: 30px;
+    font-family: "trebuchet ms", "arial", sans-serif;
+    font-weight: bold;
+}
+
+#cabecera1>img {
+    position: relative;
+    top: 5px;
+}
+
+#franja {
+    height: 40px;
+    background-color: silver;
+    box-shadow: 2px 2px 5px #999;
+}
+
+#opciones-navegacion {
+    border: 0px;
+    box-shadow: 2px 2px 5px #999;
+}
+
+#opciones-navegacion.navbar.navbar-inverse {
+    margin-bottom: 0px;
+}
+
+#navbar {
+    font-family: "trebuchet ms", "arial", sans-serif;
+    font-weight: bold;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.navbar-header .navbar-brand {
+    border-right: 1px solid white;
+}
+
+#navbar>ul>li>a {
+    border-right: 1px solid white;
+}
+
+#login>img {
+    position: relative;
+    bottom: 12px;
+}
+
+#login>button {
+    position: relative;
+    bottom: 12px;
+}
+
+.container .page-header {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px;
+}
+
+.page-header>h1 {
+    font-family: "trebuchet ms", "arial", sans-serif;
+    font-size: 27px;
+}
+
+.table-bordered {
+    text-align: center;
+}
+
+.table-bordered>thead>tr>th {
+    text-align: center;
+    background-color: #f8c143;
+}
+
+tr>td>img {
+    width: 20px;
+    height: 20px;
+}
