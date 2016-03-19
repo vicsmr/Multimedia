@@ -113,6 +113,14 @@ tr>td>img {
     border-bottom: 3px solid silver;
 }
 
+#statistics>h2 {
+    border-bottom: 3px solid silver;
+}
+
+.table-bordered>tbody>tr>th {
+    text-align: center;
+}
+
 #trophies>h2 {
     border-bottom: 3px solid silver;
 }
