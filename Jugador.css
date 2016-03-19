@@ -109,6 +109,10 @@ tr>td>img {
     height: 30px;
 }
 
-#carrera>h2 {
+#career>h2 {
+    border-bottom: 3px solid silver;
+}
+
+#trophies>h2 {
     border-bottom: 3px solid silver;
 }
