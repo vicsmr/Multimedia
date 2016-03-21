@@ -159,6 +159,16 @@ body {
     font-family: "trebuchet ms", "arial", sans-serif;
 }
 
+#eastern{
+    background-color:#c6f0ce;
+    color:#158119;
+}
+
+#western{
+    background-color:#f5c9c6;
+    color:#81152e;
+}
+
 
 
 #footer {

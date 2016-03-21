@@ -156,9 +156,17 @@ body {
     background-color: #f8c143;
 }
 
-.panel-heading img {
-    margin-left: 20px;
+.panel .panel-heading img {
+    >>>>>>> c9abe9bb4b7383b57f21ab1f284d3687e89f3640 margin-left: 20px;
     width: 35px;
+}
+
+.panel td {
+    text-align: justify;
+}
+
+.panel th {
+    text-align: justify;
 }
 
 .table .img-rounded {
