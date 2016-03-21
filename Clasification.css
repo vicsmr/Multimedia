@@ -145,9 +145,20 @@ body {
     margin-top: 20px;
 }
 
+.panel thead{
+    background-color: #d3cfcf;
+}
+
 .panel-heading{
     text-align: center;
+    background-color: #f8c143;
 }
+
+.panel-heading img{
+    margin-left: 20px;
+    width: 35px;
+}
+
 
 .table .img-rounded{
     width: 40px;
