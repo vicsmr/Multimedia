@@ -154,9 +154,17 @@ body {
     background-color: #f8c143;
 }
 
-.panel-heading img{
+.panel .panel-heading img{
     margin-left: 20px;
     width: 35px;
+}
+
+.panel td{
+    text-align:justify;
+}
+
+.panel th{
+    text-align:justify;
 }
 
 
