@@ -140,6 +140,26 @@ body {
     bottom: 12px;
 }
 
+ol{
+    list-style: none;
+    display: flex;
+    padding-left: 0px;
+    background-color: #deebf7;
+}
+
+ol li{
+    padding:10px;
+    font-weight: bold;
+}
+
+#active{
+    color:#716d6d;
+}
+
+#raya{
+    color:#acacac;
+}
+
 .container .page-header {
     margin-top: 0px;
     margin-bottom: 0px;
