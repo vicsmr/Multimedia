@@ -96,7 +96,7 @@ body {
     border-bottom: 1px solid #c6c6c6;
     border-left: 1px solid #c6c6c6;
     border-right: 1px solid #c6c6c6;
-    width: 190px;
+    width: 200px;
 }
 
 #navbarCollapse>ul>li>ul>li>a {
@@ -141,6 +141,31 @@ body {
 #login>button {
     position: relative;
     bottom: 12px;
+}
+
+ol{
+    list-style: none;
+    display: flex;
+    padding-left: 0px;
+    background-color: #deebf7;
+}
+
+ol li{
+    padding:10px;
+    font-weight: bold;
+}
+
+ol img{
+    width: 10px;
+    margin-right: 8px;
+}
+
+#active{
+    color:#716d6d;
+}
+
+#raya{
+    color:#acacac;
 }
 
 .panel {

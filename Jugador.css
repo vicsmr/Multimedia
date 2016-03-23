@@ -152,6 +152,11 @@ ol li{
     font-weight: bold;
 }
 
+ol img{
+    width: 10px;
+    margin-right: 8px;
+}
+
 #active{
     color:#716d6d;
 }

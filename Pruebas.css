@@ -150,6 +150,31 @@ body {
     bottom: 12px;
 }
 
+#breadcrumb{
+    list-style: none;
+    display: flex;
+    padding-left: 0px;
+    background-color: #deebf7;
+}
+
+#breadcrumb li{
+    padding:10px;
+    font-weight: bold;
+}
+
+#breadcrumb img{
+    width: 10px;
+    margin-right: 8px;
+}
+
+#active{
+    color:#716d6d;
+}
+
+#raya{
+    color:#acacac;
+}
+
 .img-responsive {
     padding-top: 20px;
     margin-left: auto;

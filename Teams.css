@@ -140,6 +140,31 @@ body {
     bottom: 12px;
 }
 
+ol{
+    list-style: none;
+    display: flex;
+    padding-left: 0px;
+    background-color: #deebf7;
+}
+
+ol li{
+    padding:10px;
+    font-weight: bold;
+}
+
+ol img{
+    width: 10px;
+    margin-right: 8px;
+}
+
+#active{
+    color:#716d6d;
+}
+
+#raya{
+    color:#acacac;
+}
+
 .list-group {
     margin-top: 20px;
 }
