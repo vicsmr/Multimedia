@@ -93,9 +93,9 @@ body {
 
 #navbarCollapse>ul>li>ul>li {
     background-color: #211f1f;
-    border-bottom: 1px solid #c6c6c6;
-    border-left: 1px solid #c6c6c6;
-    border-right: 1px solid #c6c6c6;
+    border-bottom: 2px solid #c6c6c6;
+    border-left: 2px solid #c6c6c6;
+    border-right: 2px solid #c6c6c6;
     width: 200px;
 }
 
@@ -105,6 +105,14 @@ body {
     font-weight: bold;
     display: block;
     text-align: justify;
+}
+
+#rounded1{
+    border-radius: 0px 0px 0px 15px;
+}
+
+#rounded2{
+    border-radius: 0px 0px 15px 0px;
 }
 
 #conferenciaEste>a {
@@ -187,7 +195,9 @@ ol img{
 }
 
 .panel td {
-    text-align: justify;
+    border-style: solid;
+    border-width: 0px 0px 0px 1px;
+    border-color: #c7c3c3;
 }
 
 .panel th {
