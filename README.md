@@ -31,7 +31,7 @@ Capturas:
 <img src="Capturas/calendario.PNG">
 
 *Clasificacion:
-<img src="Capturas/clasificacion.PNG"
+<img src="Capturas/clasificacion.PNG">
 
 
 
