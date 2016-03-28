@@ -17,6 +17,11 @@ Parte privada:
 * Administrar los equipos que consta de: añadir jugadores, eliminar jugadores, aplazar partidos (gestor de cada equipo y un gestor global)
 * Los usuarios: pueden añadir login, cambiar su perfil, añadir un partido, añadir un torneo...
 
+Diagrama:
+
+<img src="Captura.png">
+
+
 
 Integrantes:
 * Alvaro Parras Gomez -  a.parrasg@alumnos.urjc.es - aparrasg
