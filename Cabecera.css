@@ -151,19 +151,19 @@ body {
     bottom: 12px;
 }
 
-ol{
+#breadcrumb{
     list-style: none;
     display: flex;
     padding-left: 0px;
     background-color: #deebf7;
 }
 
-ol li{
+#breadcrumb li{
     padding:10px;
     font-weight: bold;
 }
 
-ol img{
+#breadcrumb img{
     width: 10px;
     margin-right: 8px;
 }
