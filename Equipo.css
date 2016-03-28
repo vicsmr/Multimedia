@@ -49,13 +49,6 @@ tr>td>img {
     margin-top: 50px;
 }
 
-ul li {
-    float: left;
-    width: 199px;
-    text-align: center;
-    border-left: 1px solid #DDDCD8;
-}
-
 .top {
     background-color: #EAE9E4;
     height: 75px;
