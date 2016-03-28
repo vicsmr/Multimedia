@@ -34,6 +34,11 @@ Capturas:
 <img src="Capturas/clasificacion.PNG">
 
 
+Descarga: 
+
+Recomendamos la siguiente instruccion que ha sido probada en el sistema operativo : Windows
+git clone https://github.com/flopezn11/DAW fase2
+
 
 Integrantes:
 * Alvaro Parras Gomez -  a.parrasg@alumnos.urjc.es - aparrasg
