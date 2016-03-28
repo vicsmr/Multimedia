@@ -91,7 +91,7 @@ body {
     width: 30.0em;
 }
 
-#navbarCollapse>ul>li>ul>li {
+#teams>ul>li {
     background-color: #211f1f;
     border-bottom: 2px solid #c6c6c6;
     border-left: 2px solid #c6c6c6;
@@ -99,7 +99,7 @@ body {
     width: 200px;
 }
 
-#navbarCollapse>ul>li>ul>li>a {
+#teams>ul>li>a {
     text-decoration: none;
     padding: 4px 6px 4px 13px;
     font-weight: bold;
@@ -136,6 +136,38 @@ body {
 #navbarCollapse .img-rounded {
     width: 30px;
     padding-right: 8px;
+}
+
+#schedule>ul>#numeros{
+    background-color: #211f1f;
+    border-bottom: 1px solid #c6c6c6;
+    border-left: 1px solid #c6c6c6;
+    border-right: 1px solid #c6c6c6;
+    width: 40px;
+}
+
+#rounds{
+    background-color: #dda715;
+    border-bottom: 1px solid #c6c6c6;
+    border-left: 1px solid #c6c6c6;
+    border-right: 1px solid #c6c6c6;
+    width: 200px;
+}
+
+#rounds>a{
+    color: black;
+}
+
+#rounds>a:hover{
+    color: black;
+}
+
+#schedule>ul>li>a {
+    text-decoration: none;
+    padding: 4px 6px 4px 13px;
+    font-weight: bold;
+    display: block;
+    text-align: center;
 }
 
 
