@@ -17,6 +17,22 @@ Diagrama:
 
 <img src="diagrama.png">
 
+Capturas:
+*Home y los desplegables (presentes en todas las paginas):
+<img src="Capturas/Home.PNG">
+<img src="Capturas/desplegable_login.png">
+<img src="Capturas/desplegable_de_equipo.png">
+<img src="Capturas/desplegable_calendario.png">
+
+*Equipos:
+<img src="Capturas/Teams.PNG">
+
+*Calendario:
+<img src="Capturas/calendario.PNG">
+
+*Clasificacion:
+<img src="Capturas/clasificacion.PNG"
+
 
 
 Integrantes:
