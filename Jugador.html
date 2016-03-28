@@ -11,6 +11,7 @@
     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <script src="js/jquery-2.1.3.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="login.js"></script>
 </head>
 
 
@@ -24,7 +25,29 @@
             <div id="franja" class="panel-body">
                 <div id="login">
                     <img src="https://cdn0.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/user-male-circle-blue-128.png" class="img-circle" alt="Login" width="35" height="35">
-                    <button type="button" class="btn btn-info">Login</button>
+                    <div id="loginContainer">
+                        <button id="loginButton"><span>Login</span><em></em>
+                        </button>
+                        <div style="clear:both"></div>
+                        <div id="loginBox">
+                            <form id="loginForm">
+                                <fieldset id="body">
+                                    <fieldset>
+                                        <label for="email">Email Address</label>
+                                        <input type="text" name="email" id="email" />
+                                    </fieldset>
+                                    <fieldset>
+                                        <label for="password">Password</label>
+                                        <input type="password" name="password" id="password" />
+                                    </fieldset>
+                                    <input type="submit" id="login" value="Sign in" />
+                                    <label for="checkbox">
+                                        <input type="checkbox" id="checkbox" />Remember me</label>
+                                </fieldset>
+                                <span><a href="#">Forgot your password?</a></span>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -41,11 +64,14 @@
 
             <div id="navbarCollapse" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="Pruebas.html">Home</a></li>
+                    <li class="active"><a href="Pruebas.html">Home</a>
+                    </li>
                     <li><a href="Teams.html">Teams</a>
                         <ul class="nav navbar-nav hidden-xs">
-                            <li id="conferenciaEste"><a>Eastern Conference</a></li>
-                            <li id="conferenciaOeste"><a>Western Conference</a></li>
+                            <li id="conferenciaEste"><a>Eastern Conference</a>
+                            </li>
+                            <li id="conferenciaOeste"><a>Western Conference</a>
+                            </li>
                             <li>
                                 <a href="#"><img class="img-rounded" src="http://futhead.cursecdn.com/static/img/15/clubs/689.png">New York</a>
                             </li>
@@ -96,9 +122,12 @@
                             </li>
                         </ul>
                     </li>
-                    <li><a href="Schedule1.html">Schedule</a></li>
-                    <li><a href="Clasification.html">Clasification</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="Schedule1.html">Schedule</a>
+                    </li>
+                    <li><a href="Clasification.html">Clasification</a>
+                    </li>
+                    <li><a href="#">Contact</a>
+                    </li>
                 </ul>
 
                 <form class="navbar-form navbar-left" role="search">
@@ -110,13 +139,17 @@
             </div>
         </nav>
         <ol id="breadcrumb">
-          <li><a href="Pruebas.html"><img class="img-rounded" src=http://4.bp.blogspot.com/_A0w2msagD40/SSrCvRwW5cI/AAAAAAAACb8/guoEtikOYSc/s1600/imagen_flecha_derecha%5B1%5D.gif>Home</a></li>
-          <li id="raya">/</li>
-          <li><a href="Teams.html">Teams</a></li>
-          <li id="raya">/</li>
-          <li><a href="#">Montreal</a></li>
-          <li id="raya">/</li>
-          <li id="active">Didier Drogba</li>
+            <li>
+                <a href="Pruebas.html"><img class="img-rounded" src=http://4.bp.blogspot.com/_A0w2msagD40/SSrCvRwW5cI/AAAAAAAACb8/guoEtikOYSc/s1600/imagen_flecha_derecha%5B1%5D.gif>Home</a>
+            </li>
+            <li id="raya">/</li>
+            <li><a href="Teams.html">Teams</a>
+            </li>
+            <li id="raya">/</li>
+            <li><a href="#">Montreal</a>
+            </li>
+            <li id="raya">/</li>
+            <li id="active">Didier Drogba</li>
         </ol>
         <div id="cuerpo">
             <div class="page-header">
@@ -151,42 +184,50 @@
                                 <tbody>
                                     <tr>
                                         <td>Le Mans</td>
-                                        <td><img src="http://lh6.ggpht.com/_gHhBxs3JECA/TO7GCMUrFnI/AAAAAAAAALc/CPqH-ItS9eo/Le-mans.png"></td>
+                                        <td><img src="http://lh6.ggpht.com/_gHhBxs3JECA/TO7GCMUrFnI/AAAAAAAAALc/CPqH-ItS9eo/Le-mans.png">
+                                        </td>
                                         <td>1998-2002</td>
                                     </tr>
                                     <tr>
                                         <td>Guingamp</td>
-                                        <td><img src="http://e04-marca.uecdn.es/iconos/escudos/opta/futbol/428.png"></td>
+                                        <td><img src="http://e04-marca.uecdn.es/iconos/escudos/opta/futbol/428.png">
+                                        </td>
                                         <td>2002-2003</td>
                                     </tr>
                                     <tr>
                                         <td>Marseille</td>
-                                        <td><img src="http://estaticos.marca.com/iconos/v1.x/v1.0/fotos-apps/futbol/escudos/00198.png"></td>
+                                        <td><img src="http://estaticos.marca.com/iconos/v1.x/v1.0/fotos-apps/futbol/escudos/00198.png">
+                                        </td>
                                         <td>2003-2004</td>
                                     </tr>
                                     <tr>
                                         <td>Chelsea</td>
-                                        <td><img src="http://icons.iconarchive.com/icons/giannis-zographos/british-football-club/128/Chelsea-icon.png"></td>
+                                        <td><img src="http://icons.iconarchive.com/icons/giannis-zographos/british-football-club/128/Chelsea-icon.png">
+                                        </td>
                                         <td>2004-2012</td>
                                     </tr>
                                     <tr>
                                         <td>Shanghai Shenhua</td>
-                                        <td><img src="https://blogenstandby.files.wordpress.com/2012/03/shanghai-shenhua.png"></td>
+                                        <td><img src="https://blogenstandby.files.wordpress.com/2012/03/shanghai-shenhua.png">
+                                        </td>
                                         <td>2012</td>
                                     </tr>
                                     <tr>
                                         <td>Galatasaray</td>
-                                        <td><img src="http://cdn4.aptoide.com/imgs/4/1/2/41285516cca36c82c6cf0b456a498033_icon_96x96.png"></td>
+                                        <td><img src="http://cdn4.aptoide.com/imgs/4/1/2/41285516cca36c82c6cf0b456a498033_icon_96x96.png">
+                                        </td>
                                         <td>2012-2014</td>
                                     </tr>
                                     <tr>
                                         <td>Chelsea</td>
-                                        <td><img src="http://icons.iconarchive.com/icons/giannis-zographos/british-football-club/128/Chelsea-icon.png"></td>
+                                        <td><img src="http://icons.iconarchive.com/icons/giannis-zographos/british-football-club/128/Chelsea-icon.png">
+                                        </td>
                                         <td>2014-2015</td>
                                     </tr>
                                     <tr>
                                         <td>Montreal Impact</td>
-                                        <td><img src="http://img.auctiva.com/imgdata/6/5/9/7/1/3/webimg/883026796_o.png"></td>
+                                        <td><img src="http://img.auctiva.com/imgdata/6/5/9/7/1/3/webimg/883026796_o.png">
+                                        </td>
                                         <td>2015-2016</td>
                                     </tr>
                                 </tbody>
@@ -209,43 +250,50 @@
                                 <tbody>
                                     <tr>
                                         <td>Le Mans</td>
-                                        <td><img src="http://lh6.ggpht.com/_gHhBxs3JECA/TO7GCMUrFnI/AAAAAAAAALc/CPqH-ItS9eo/Le-mans.png"></td>
+                                        <td><img src="http://lh6.ggpht.com/_gHhBxs3JECA/TO7GCMUrFnI/AAAAAAAAALc/CPqH-ItS9eo/Le-mans.png">
+                                        </td>
                                         <td>72</td>
                                         <td>15</td>
                                     </tr>
                                     <tr>
                                         <td>Guingamp</td>
-                                        <td><img src="http://e04-marca.uecdn.es/iconos/escudos/opta/futbol/428.png"></td>
+                                        <td><img src="http://e04-marca.uecdn.es/iconos/escudos/opta/futbol/428.png">
+                                        </td>
                                         <td>50</td>
                                         <td>24</td>
                                     </tr>
                                     <tr>
                                         <td>Marseille</td>
-                                        <td><img src="http://estaticos.marca.com/iconos/v1.x/v1.0/fotos-apps/futbol/escudos/00198.png"></td>
+                                        <td><img src="http://estaticos.marca.com/iconos/v1.x/v1.0/fotos-apps/futbol/escudos/00198.png">
+                                        </td>
                                         <td>55</td>
                                         <td>32</td>
                                     </tr>
                                     <tr>
                                         <td>Chelsea</td>
-                                        <td><img src="http://icons.iconarchive.com/icons/giannis-zographos/british-football-club/128/Chelsea-icon.png"></td>
+                                        <td><img src="http://icons.iconarchive.com/icons/giannis-zographos/british-football-club/128/Chelsea-icon.png">
+                                        </td>
                                         <td>381</td>
                                         <td>164</td>
                                     </tr>
                                     <tr>
                                         <td>Shanghai Shenhua</td>
-                                        <td><img src="https://blogenstandby.files.wordpress.com/2012/03/shanghai-shenhua.png"></td>
+                                        <td><img src="https://blogenstandby.files.wordpress.com/2012/03/shanghai-shenhua.png">
+                                        </td>
                                         <td>11</td>
                                         <td>8</td>
                                     </tr>
                                     <tr>
                                         <td>Galatasaray</td>
-                                        <td><img src="http://cdn4.aptoide.com/imgs/4/1/2/41285516cca36c82c6cf0b456a498033_icon_96x96.png"></td>
+                                        <td><img src="http://cdn4.aptoide.com/imgs/4/1/2/41285516cca36c82c6cf0b456a498033_icon_96x96.png">
+                                        </td>
                                         <td>53</td>
                                         <td>20</td>
                                     </tr>
                                     <tr>
                                         <td>Montreal Impact</td>
-                                        <td><img src="http://img.auctiva.com/imgdata/6/5/9/7/1/3/webimg/883026796_o.png"></td>
+                                        <td><img src="http://img.auctiva.com/imgdata/6/5/9/7/1/3/webimg/883026796_o.png">
+                                        </td>
                                         <td>14</td>
                                         <td>12</td>
                                     </tr>
