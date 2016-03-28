@@ -1,5 +1,3 @@
-// Login Form
-
 $(function() {
     var button = $('#loginButton');
     var box = $('#loginBox');
