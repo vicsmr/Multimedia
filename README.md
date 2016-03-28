@@ -27,10 +27,10 @@ Capturas:
 *Equipos:
 <img src="Capturas/Teams.PNG">
 
-*Calendario:
+*Calendario:               
 <img src="Capturas/calendario.PNG">
 
-*Clasificacion:
+*Clasificacion:             
 <img src="Capturas/clasificacion.PNG">
 
 
