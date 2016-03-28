@@ -19,7 +19,7 @@ Parte privada:
 
 Diagrama:
 
-<img src="Captura.png">
+<img src="diagrama.png">
 
 
 
