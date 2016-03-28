@@ -109,3 +109,8 @@ tr>td>img {
 .pink {
     background-color: #BC9B94;
 }
+
+td a{
+    text-decoration: none;
+    color: black;
+}
