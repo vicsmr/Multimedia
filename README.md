@@ -8,14 +8,10 @@ Gestión de una liga de futbol municipal
 * Información de cada equipo (1)
 * Información de cada jugador (2)
 * Calendario (4)
-* Tienda
 * seccion de fotos, comentarios sobre los arbitros (cronicas) (5)
-* Torneos (6)
 
 Parte privada:
-* Comprar en la tienda
-* Administrar los equipos que consta de: añadir jugadores, eliminar jugadores, aplazar partidos (gestor de cada equipo y un gestor global)
-* Los usuarios: pueden añadir login, cambiar su perfil, añadir un partido, añadir un torneo...
+* Los usuarios: pueden realizar cronicas, valoracion de los arbitros, consultar valoraciones de los arbitros, reservar campos de entrenamiento,elegir horarios.
 
 Diagrama:
 
