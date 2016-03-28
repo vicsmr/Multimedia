@@ -37,6 +37,7 @@ Capturas:
 Descarga: 
 
 Recomendamos la siguiente instruccion que ha sido probada en el sistema operativo : Windows
+
 git clone https://github.com/flopezn11/DAW fase2
 
 
