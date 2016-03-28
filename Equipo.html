@@ -2,13 +2,14 @@
 <html>
 
 <head>
-    <title>Major League FutSal</title>
+    <title>Major League Football</title>
     <link rel="shortcut icon" href="https://image.jimcdn.com/app/cms/image/transf/none/path/s88c62990719cf949/image/ib8fd0c23a34d1f74/version/1290641330/image.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link type="text/css" rel="stylesheet" href="Equipo.css" />
-    <link type="text/css" rel="stylesheet" href="Cabecera.css" >
+    <link type="text/css" rel="stylesheet" href="Cabecera.css">
     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="funcionalidadEquipo.js"></script>
     <script src="js/jquery-2.1.3.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 </head>
@@ -19,7 +20,7 @@
         <div id="cabecera">
             <div id="cabecera1" class="panel-heading">
                 <img src="https://fanart.tv/fanart/movies/9942/hdmovielogo/major-league-51034af92ecc0.png" class="img-circle" width="115" height="75">
-                <span>Major League Futsal</span>
+                <span>Major League Football</span>
             </div>
             <div id="franja" class="panel-body">
                 <div id="login">
@@ -36,37 +37,75 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="#" class="navbar-brand">MLFS</a>
+                <a href="#" class="navbar-brand">MLF</a>
             </div>
 
             <div id="navbarCollapse" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="Pruebas.html">Home</a>
+                    </li>
                     <li class="active"><a href="Teams.html">Teams</a>
                         <ul class="nav navbar-nav hidden-xs">
-                            <li id="conferenciaEste"><a>Eastern Conference</a></li>
-                            <li id="conferenciaOeste"><a>Western Conference</a></li>
-                            <li><a href="#"><img class="img-rounded" src="http://futhead.cursecdn.com/static/img/15/clubs/689.png">New York</a></li>
-                            <li><a href="#"><img class="img-rounded" src="http://heycdn.thisisfootball.com/wp-content/uploads/2013/09/xfc-dallas-logo-64x64.png.pagespeed.ic.7Z29WTYJC9.png">FC Dallas</a></li>
-                            <li><a href="#"><img class="img-rounded" src="http://www.moddingway.com/fifadb/teams/l687.png">Columbus Crew</a></li>
-                            <li><a href="#"><img class="img-rounded" src="http://footytweets.com/images/team_logos/130.png">LA Galaxy</a></li>
-                            <li><a href="#"><img class="img-rounded" src="http://www.bold.dk/img/tag/64x64/758.png">Montreal</a></li>
-                            <li><a href="#"><img class="img-rounded" src="http://adn.fcupdate.nl/clubs/medium/28996.png">Sounders FC</a></li>
-                            <li><a href="#"><img class="img-rounded" src="http://heycdn.thisisfootball.com/wp-content/uploads/2013/09/xUnion-Crest-300x300-64x64.png.pagespeed.ic.HdFRutSXUM.png">Philadelphia</a></li>
-                            <li><a href="#"><img class="img-rounded" src="http://heycdn.thisisfootball.com/wp-content/uploads/2013/09/xPortland_Timbers_MLS_logo.svg_1-64x64.png.pagespeed.ic.V99pB6RgY3.png">Portland Timbers</a></li>
-                            <li><a href="#"><img class="img-rounded" src="http://thisisfootball.dk/wp-content/uploads/2013/09/xchicago-fire-logo-64x64.png.pagespeed.ic.kshhtzY5gF.png">Chicago</a></li>
-                            <li><a href="#"><img class="img-rounded" src="http://heycdn.thisisfootball.com/wp-content/uploads/2013/09/xsan-jose-earthquakes-logo-64x64.png.pagespeed.ic.Ep5PkwAkfG.png">EarthQuakes</a></li>
-                            <li><a href="#"><img class="img-rounded" src="http://heycdn.thisisfootball.com/wp-content/uploads/2015/03/xorlando-city-sc-64x64.png.pagespeed.ic.I1R3ly18C-.png">Orlando City</a></li>
-                            <li><a href="#"><img class="img-rounded" src="http://heycdn.thisisfootball.com/wp-content/uploads/2013/09/xvancouver-whitecaps-fc-hd-logo-64x64.png.pagespeed.ic.ulCgt0bJ9G.png">Whitecaps FC</a></li>
-                            <li><a href="#"><img class="img-rounded" src="http://futhead.cursecdn.com/static/img/15/clubs/111651.png">Toronto</a></li>
-                            <li><a href="#"><img class="img-rounded" src="http://static.oddschecker.com/content/team-badges/football/1763.png?v=11.0.0">Sporting</a></li>
-                            <li><a href="#"><img class="img-rounded" src="http://www.bold.dk/img/tag/64x64/742.png">D.C United</a></li>
-                            <li><a href="#"><img class="img-rounded" src="http://futhead.cursecdn.com/static/img/15/clubs/694.png">Colorado</a></li>
+                            <li id="conferenciaEste"><a>Eastern Conference</a>
+                            </li>
+                            <li id="conferenciaOeste"><a>Western Conference</a>
+                            </li>
+                            <li>
+                                <a href="#"><img class="img-rounded" src="http://futhead.cursecdn.com/static/img/15/clubs/689.png">New York</a>
+                            </li>
+                            <li>
+                                <a href="#"><img class="img-rounded" src="http://heycdn.thisisfootball.com/wp-content/uploads/2013/09/xfc-dallas-logo-64x64.png.pagespeed.ic.7Z29WTYJC9.png">FC Dallas</a>
+                            </li>
+                            <li>
+                                <a href="#"><img class="img-rounded" src="http://www.moddingway.com/fifadb/teams/l687.png">Columbus Crew</a>
+                            </li>
+                            <li>
+                                <a href="#"><img class="img-rounded" src="http://footytweets.com/images/team_logos/130.png">LA Galaxy</a>
+                            </li>
+                            <li>
+                                <a href="Equipo.html"><img class="img-rounded" src="http://www.bold.dk/img/tag/64x64/758.png">Montreal</a>
+                            </li>
+                            <li>
+                                <a href="#"><img class="img-rounded" src="http://adn.fcupdate.nl/clubs/medium/28996.png">Sounders FC</a>
+                            </li>
+                            <li>
+                                <a href="#"><img class="img-rounded" src="http://heycdn.thisisfootball.com/wp-content/uploads/2013/09/xUnion-Crest-300x300-64x64.png.pagespeed.ic.HdFRutSXUM.png">Philadelphia</a>
+                            </li>
+                            <li>
+                                <a href="#"><img class="img-rounded" src="http://heycdn.thisisfootball.com/wp-content/uploads/2013/09/xPortland_Timbers_MLS_logo.svg_1-64x64.png.pagespeed.ic.V99pB6RgY3.png">Portland Timbers</a>
+                            </li>
+                            <li>
+                                <a href="#"><img class="img-rounded" src="http://thisisfootball.dk/wp-content/uploads/2013/09/xchicago-fire-logo-64x64.png.pagespeed.ic.kshhtzY5gF.png">Chicago</a>
+                            </li>
+                            <li>
+                                <a href="#"><img class="img-rounded" src="http://heycdn.thisisfootball.com/wp-content/uploads/2013/09/xsan-jose-earthquakes-logo-64x64.png.pagespeed.ic.Ep5PkwAkfG.png">EarthQuakes</a>
+                            </li>
+                            <li>
+                                <a href="#"><img class="img-rounded" src="http://heycdn.thisisfootball.com/wp-content/uploads/2015/03/xorlando-city-sc-64x64.png.pagespeed.ic.I1R3ly18C-.png">Orlando City</a>
+                            </li>
+                            <li>
+                                <a href="#"><img class="img-rounded" src="http://heycdn.thisisfootball.com/wp-content/uploads/2013/09/xvancouver-whitecaps-fc-hd-logo-64x64.png.pagespeed.ic.ulCgt0bJ9G.png">Whitecaps FC</a>
+                            </li>
+                            <li>
+                                <a href="#"><img class="img-rounded" src="http://futhead.cursecdn.com/static/img/15/clubs/111651.png">Toronto</a>
+                            </li>
+                            <li>
+                                <a href="#"><img class="img-rounded" src="http://static.oddschecker.com/content/team-badges/football/1763.png?v=11.0.0">Sporting</a>
+                            </li>
+                            <li>
+                                <a href="#"><img class="img-rounded" src="http://www.bold.dk/img/tag/64x64/742.png">D.C United</a>
+                            </li>
+                            <li>
+                                <a href="#"><img class="img-rounded" src="http://futhead.cursecdn.com/static/img/15/clubs/694.png">Colorado</a>
+                            </li>
                         </ul>
                     </li>
-                    <li><a href="#">Schedule</a></li>
-                    <li><a href="Clasification.html">Clasification</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="Schedule1.html">Schedule</a>
+                    </li>
+                    <li><a href="Clasification.html">Clasification</a>
+                    </li>
+                    <li><a href="#">Contact</a>
+                    </li>
                 </ul>
 
                 <form class="navbar-form navbar-left" role="search">
@@ -88,7 +127,14 @@
             <div class="page-header">
                 <h1>Information about teams: <small>Montreal Impact</small> <img src="http://www.bold.dk/img/tag/64x64/758.png"></h1>
             </div>
-            <div id="general">
+            <div id="botonesdeCammbio">
+                <button type="button" class="btn btn-success" onclick="mostrar(1)">Players/Staff</button>
+                <button type="button" class="btn btn-success" onclick="mostrar(2)">History</button>
+                <button type="button" class="btn btn-success" onclick="mostrar(3)">Estadisticas</button>
+                <button type="button" class="btn btn-success" onclick="mostrar(4)">Goleadores</button>
+                <button type="button" class="btn btn-success" onclick="mostrar(5)">Palmares</button>
+            </div>
+            <div id="opcion1">
                 <div class="container2">
                     <div class="row">
                         <div class="col-md-8 col-xs-6">
@@ -107,31 +153,37 @@
                                         <td>Evan</td>
                                         <td>Bush</td>
                                         <td>Goalkeeper</td>
-                                        <td><img src="http://www.onboardlogistics.net/contactenos/bandera-USA.png"></td>
+                                        <td><img src="http://www.onboardlogistics.net/contactenos/bandera-USA.png">
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>Ambroise</td>
                                         <td>Oyongo</td>
                                         <td>Defense</td>
-                                        <td><img src="http://aguitech.com/images/Iconos/FlagsWorld/Cameroon.png"></td>
+                                        <td><img src="http://aguitech.com/images/Iconos/FlagsWorld/Cameroon.png">
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>Hassoun</td>
                                         <td>Camara</td>
                                         <td>Defense</td>
-                                        <td><img src="http://www.rhtacticboards.com/img/fr.png"></td>
+                                        <td><img src="http://www.rhtacticboards.com/img/fr.png">
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>Patrice</td>
-                                        <td>Bernier <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/L%C3%ADnea_C_(SBASE).svg/200px-L%C3%ADnea_C_(SBASE).svg.png"></td>
+                                        <td>Bernier <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/L%C3%ADnea_C_(SBASE).svg/200px-L%C3%ADnea_C_(SBASE).svg.png">
+                                        </td>
                                         <td>Midfield</td>
-                                        <td><img src="http://www.caracas2013.com/CAN.png"></td>
+                                        <td><img src="http://www.caracas2013.com/CAN.png">
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>Didier</td>
                                         <td>Drogba</td>
                                         <td>Forward</td>
-                                        <td><img src="http://ohla.tv/uploads/3/4/7/5/34759513/9999192_orig.png"></td>
+                                        <td><img src="http://ohla.tv/uploads/3/4/7/5/34759513/9999192_orig.png">
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -152,37 +204,46 @@
                                         <td>Mauro</td>
                                         <td>Biello</td>
                                         <td>Coach</td>
-                                        <td><img src="http://www.caracas2013.com/CAN.png"></td>
+                                        <td><img src="http://www.caracas2013.com/CAN.png">
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>Philippe</td>
                                         <td>Eullafroy</td>
                                         <td>Delegate</td>
-                                        <td><img src="http://www.rhtacticboards.com/img/fr.png"></td>
+                                        <td><img src="http://www.rhtacticboards.com/img/fr.png">
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>Mike</td>
                                         <td>Sorber</td>
                                         <td>Delegate</td>
-                                        <td><img src="http://www.onboardlogistics.net/contactenos/bandera-USA.png"></td>
+                                        <td><img src="http://www.onboardlogistics.net/contactenos/bandera-USA.png">
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>Paolo</td>
                                         <td>Pacione</td>
                                         <td>Physiotherapist</td>
-                                        <td><img src="http://www.caracas2013.com/CAN.png"></td>
+                                        <td><img src="http://www.caracas2013.com/CAN.png">
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>Youssef</td>
                                         <td>Dahha</td>
                                         <td>Goalkeeper Coach</td>
-                                        <td><img src="http://images.vectorhq.com/images/previews/5c4/moroccan-flag-circle-psd-452658.png"></td>
+                                        <td><img src="http://images.vectorhq.com/images/previews/5c4/moroccan-flag-circle-psd-452658.png">
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div id="opcion2" style="display:none;">
+                <h1>History, <small>del Montreal Impact</small></h1>
+                <p class="text-justify">Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id. Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos. Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu, eirmod consectetuer signiferumque eu per. In usu latine equidem dolores. Quo no falli viris intellegam, ut fugit veritus placerat per. Ius id vidit volumus mandamus, vide veritus democritum te nec, ei eos debet libris consulatu. No mei ferri graeco dicunt, ad cum veri accommodare. Sed at malis omnesque delicata, usu et iusto zzril meliore. Dicunt maiorum eloquentiam cum cu, sit summo dolor essent te. Ne quodsi nusquam legendos has, ea dicit voluptua eloquentiam pro, ad sit quas qualisque. Eos vocibus deserunt quaestio ei. Blandit incorrupte quaerendum in quo, nibh impedit id vis, vel no nullam semper audiam. Ei populo graeci consulatu mei, has ea stet modus phaedrum. Inani oblique ne has, duo et veritus detraxit. Tota ludus oratio ea mel, offendit persequeris ei vim. Eos dicat oratio partem ut, id cum ignota senserit intellegat. Sit inani ubique graecis ad, quando graecis liberavisse et cum, dicit option eruditi at duo. Homero salutatus suscipiantur eum id, tamquam voluptaria expetendis ad sed, nobis feugiat similique usu ex. Eum hinc argumentum te, no sit percipit adversarium, ne qui feugiat persecuti. Odio omnes scripserit ad est, ut vidit lorem maiestatis his, putent mandamus gloriatur ne pro. Oratio iriure rationibus ne his, ad est corrumpit splendide. Ad duo appareat moderatius, ei falli tollit denique eos. Dicant evertitur mei in, ne his deserunt perpetua sententiae, ea sea omnes similique vituperatoribus. Ex mel errem intellegebat comprehensam, vel ad tantas antiopam delicatissimi, tota ferri affert eu nec. Legere expetenda pertinacia ne pro, et pro impetus persius assueverit.</p>
             </div>
         </div>
     </div>
