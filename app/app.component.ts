@@ -14,8 +14,7 @@ import {PrincipalComponent} from './principal.component';
 @Component({
 	selector: 'app',
 	templateUrl: 'app/html/app.component.html',
-	styleUrls: ['app/css/equipo.component.css', 'app/css/footer.component.css', 'app/css/header.component.css'],
-  directives: [HeaderComponent, FooterComponent, ROUTER_DIRECTIVES]
+  directives: [HeaderComponent, FooterComponent, ROUTER_DIRECTIVES],
 })
 
 @RouteConfig([

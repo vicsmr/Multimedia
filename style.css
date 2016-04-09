@@ -208,6 +208,15 @@ body {
     color:#acacac;
 }
 
+
+#footer {
+    text-align: center;
+    color: black;
+    background-color: silver;
+    height: 20px;
+    box-shadow: 2px 2px 5px #999;
+}
+
 #loginContainer {
     position:relative;
     font-size:12px;
