@@ -208,15 +208,6 @@ body {
     color:#acacac;
 }
 
-
-#footer {
-    text-align: center;
-    color: black;
-    background-color: silver;
-    height: 20px;
-    box-shadow: 2px 2px 5px #999;
-}
-
 #loginContainer {
     position:relative;
     font-size:12px;
@@ -224,10 +215,10 @@ body {
     left: 41px;
 }
 
-#loginButton { 
+#loginButton {
     display:inline-block;
-    background:#0992e8; 
-    border:1px solid #899caa; 
+    background:#0992e8;
+    border:1px solid #899caa;
     border-radius:5px;
     position:relative;
     cursor:pointer;
@@ -235,9 +226,9 @@ body {
 }
 
 #loginButton span {
-    color:#ffffff; 
-    font-size:15px; 
-    font-weight:bold;  
+    color:#ffffff;
+    font-size:15px;
+    font-weight:bold;
     padding:5px 17px 8px 10px;
     display:block
 }
@@ -253,7 +244,7 @@ body {
     display:none;
     z-index:29;
 }
-  
+
 #loginButton.active {
     border-radius:3px 3px 0 0;
 }
@@ -271,7 +262,7 @@ body {
 }
 
 #loginForm {
-    width:248px; 
+    width:248px;
     border:1px solid #899caa;
     border-radius:3px 3px 3px 3px;
     margin-top:-1px;
