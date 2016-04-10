@@ -208,6 +208,15 @@ body {
     color:#acacac;
 }
 
+#inicio-sesion{
+    display:flex;
+}
+
+#text-inicio-sesion{
+    margin-top: 8px;
+    margin-left: 20px;
+}
+
 
 #footer {
     text-align: center;

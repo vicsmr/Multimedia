@@ -8,26 +8,40 @@
             <div id="login">
                 <img src="https://cdn0.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/user-male-circle-blue-128.png" class="img-circle" alt="Login" width="35" height="35">
                 <div id="loginContainer">
-                    <button id="loginButton"><span>Login</span><em></em></button>
-                    <div style="clear:both"></div>
-                    <div id="loginBox">
-                        <form id="loginForm">
-                            <fieldset id="body">
-                                <fieldset>
-                                    <label for="email">Email Address</label>
-                                    <input type="text" name="email" id="email" />
-                                </fieldset>
-                                <fieldset>
-                                    <label for="password">Password</label>
-                                    <input type="password" name="password" id="password" />
-                                </fieldset>
-                                <input type="submit" id="login" value="Sign in" />
-                                <label for="checkbox">
-                                    <input type="checkbox" id="checkbox" />Remember me</label>
-                            </fieldset>
-                            <span><a href="#">Forgot your password?</a></span>
-                        </form>
+                    <button id="loginButton" data-toggle="modal" data-target="#myModal"><span>Login</span><em></em></button>
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                          <div id="inicio-sesion">
+                            <img src="https://cdn0.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/user-male-circle-blue-128.png" class="img-circle" alt="Login" width="35" height="35"><h4 class="modal-title" id="text-inicio-sesion">Inicio de Sesión</h4>
+                          </div>
+                        </div>
+                        <div class="modal-body">
+                          <form>
+                            <div class="form-group">
+                              <label for="recipient-name" class="control-label"><h3>Usuario</h3></label>
+                              <div class="input-group input-group-lg">
+                                 <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-user"></span></span>
+                                  <input type="text" class="form-control" placeholder="Usuario" aria-describedby="sizing-addon1">
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <label for="message-text" class="control-label"><h3>Contraseña</h3></label>
+                              <div class="input-group input-group-lg">
+                                 <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-lock"></span></span>
+                                  <input type="password" class="form-control" placeholder="Contraseña" aria-describedby="sizing-addon1">
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-primary">Inicio sesión</button>
+                        </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
             </div>
         </div>
