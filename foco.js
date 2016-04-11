@@ -10,6 +10,11 @@ function inicializarEventos() {
     x = $("#age");
     x.focus(tomaFoco);
     x.blur(pierdeFoco);
+    x = $("#nacionality");
+    x.focus(tomaFoco);
+    x.blur(pierdeFoco);
+    x = $("#position");
+    x.blur(pierdeFoco);
     x = $("#email");
     x.focus(tomaFoco);
     x.blur(pierdeFoco);
