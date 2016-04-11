@@ -27,4 +27,19 @@ import {PrincipalComponent} from './principal.component';
 	{path:'/equipo', name: 'Equipo', component: EquipoComponent},
 ])
 
-export class AppComponent {}
+export class AppComponent {
+
+	public isLogged: boolean;
+	constructor(){
+		this.isLogged = false;
+	}
+	login(email, password){
+		if(email.value =="test" && password.value=="test"){
+			this.isLogged = true;
+		}
+	}
+	logout(){
+		this.isLogged = false;
+	}
+}
+}
