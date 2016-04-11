@@ -354,6 +354,16 @@ input:focus {
     height: 435px;
 }
 
+#galeria1 {
+    background-image: url(http://www.futbolpollas.co/assets/img/backgrounds/1.jpg);
+    height: 497px;
+}
+
+#galeria2 {
+    background-image: url(http://www.futbolpollas.co/assets/img/backgrounds/1.jpg);
+    height: 497px;
+}
+
 #footer {
     text-align: center;
     color: black;
