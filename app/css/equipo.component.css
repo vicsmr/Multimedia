@@ -1,3 +1,22 @@
+#botonAgregar>img{
+    width: 40px;
+}
+
+#botonAgregar{
+    background-color: #12be20;
+    display:inline-block;
+    border:1px solid #899caa;
+    border-radius:5px;
+    position:relative;
+    cursor:pointer;
+    font-style: none;
+    color: white;
+}
+
+#botonAgregar:hover{
+    background-color: #72c378;
+}
+
 .equipacion {
     margin: 20px;
 }

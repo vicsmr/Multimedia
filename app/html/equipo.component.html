@@ -10,8 +10,15 @@
             <li id="active">Montreal Impact</li>
         </ol>
         <div id="cuerpo">
-            <div class="page-header">
-                <h1>Information about teams: <small>Montreal Impact</small> <img src="http://www.bold.dk/img/tag/64x64/758.png"></h1>
+            <div class="row">
+                <div class="col-md-10 col-sm-10 col-xs-12">
+                    <div class="page-header">
+                        <h1>Information about teams: <small>Montreal Impact</small> <img src="http://www.bold.dk/img/tag/64x64/758.png"></h1>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-12">
+                  <button id="botonAgregar" (click)="gotoFormJugador()"><img src="http://es.downloadicons.net/sites/default/files/agregar-icono-3079.png"> Agregar Jugador</button>
+                </div>
             </div>
             <div class="container">
                 <div class="row">
@@ -39,7 +46,7 @@
             <div id="opcion1">
                 <div class="container2">
                     <div class="row">
-                        <div class="col-md-8 col-xs-6">
+                        <div class="col-md-8 col-sm-8 col-xs-12">
                             <h3>Players of Montreal Impact</h3>
                             <table class="table table-bordered">
                                 <thead>
@@ -81,9 +88,9 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td><a href="Jugador.html">Didier</a>
+                                        <td><a [routerLink]="['Jugador']">Didier</a>
                                         </td>
-                                        <td><a href="Jugador.html">Drogba</a>
+                                        <td><a [routerLink]="['Jugador']">Drogba</a>
                                         </td>
                                         <td>Forward</td>
                                         <td><img src="http://ohla.tv/uploads/3/4/7/5/34759513/9999192_orig.png">
@@ -92,7 +99,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="col-md-4 col-xs-6">
+                        <div class="col-md-4 col-sm-4 col-xs-12">
                             <h3>Coaching staff of Montreal Impact</h3>
                             <table class="table table-bordered">
                                 <thead>

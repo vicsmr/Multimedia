@@ -9,6 +9,7 @@ import {Schedule2Component} from './schedule2.component';
 import {JugadorComponent} from './jugador.component';
 import {EquipoComponent} from './equipo.component';
 import {PrincipalComponent} from './principal.component';
+import {FormJugadorComponent} from './formJugador.component';
 
 
 @Component({
@@ -25,6 +26,7 @@ import {PrincipalComponent} from './principal.component';
 	{path:'/schedule2', name: 'Schedule2', component: Schedule2Component},
 	{path:'/jugador', name: 'Jugador', component: JugadorComponent},
 	{path:'/equipo', name: 'Equipo', component: EquipoComponent},
+	{path:'/formJugador', name: 'FormJugador', component: FormJugadorComponent},
 ])
 
 export class AppComponent {

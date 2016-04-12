@@ -1,5 +1,5 @@
 import {Component} from 'angular2/core';
-import {ROUTER_DIRECTIVES} from 'angular2/router';
+import {ROUTER_DIRECTIVES, Router} from 'angular2/router';
 
 @Component({
   selector: 'equipo',
@@ -8,4 +8,11 @@ import {ROUTER_DIRECTIVES} from 'angular2/router';
   styleUrls: ['app/css/equipo.component.css']
 })
 
-export class EquipoComponent {}
+export class EquipoComponent {
+  constructor(private router: Router) {
+	}
+
+	gotoFormJugador() {
+    this.router.navigate(['FormJugador']);
+  }
+}
