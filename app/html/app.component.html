@@ -65,12 +65,10 @@
               <li class="active"><a [routerLink]="['Principal']">Home</a></li>
               <li id="teams"><a [routerLink]="['Teams']">Teams</a>
                   <ul class="nav navbar-nav hidden-xs">
-                      <li id="conferenciaEste"><a>Eastern Conference</a></li>
-                      <li id="conferenciaOeste"><a>Western Conference</a></li>
-                      <li>
-                          <a href="#"><img class="img-rounded" src="http://futhead.cursecdn.com/static/img/15/clubs/689.png">New York</a>
+                      <li *ngFor="#book of books">
+                          <a [routerLink]="['BookDetail', {id: book.id}]"><img class="img-rounded" src={{book.abstract}}> {{book.title}}</a>
                       </li>
-                      <li>
+                      <!-- <li>
                           <a href="#"><img class="img-rounded" src="http://heycdn.thisisfootball.com/wp-content/uploads/2013/09/xfc-dallas-logo-64x64.png.pagespeed.ic.7Z29WTYJC9.png">FC Dallas</a>
                       </li>
                       <li>
@@ -114,7 +112,7 @@
                       </li>
                       <li id="rounded2">
                           <a href="#"><img class="img-rounded" src="http://futhead.cursecdn.com/static/img/15/clubs/694.png">Colorado</a>
-                      </li>
+                      </li> -->
                   </ul>
               </li>
               <li id="schedule"><a [routerLink]="['Schedule1']">Schedule</a>

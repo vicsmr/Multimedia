@@ -1,5 +1,5 @@
-import {Component,OnInit} from 'angular2/core';
-import {RouteConfig, Router, ROUTER_DIRECTIVES,RouteParams} from 'angular2/router';
+import {Component, OnInit} from 'angular2/core';
+import {RouteConfig, RouteParams, Router, ROUTER_DIRECTIVES} from 'angular2/router';
 import {HeaderComponent} from './header.component';
 import {FooterComponent} from './footer.component';
 import {ClasificationComponent} from './clasification.component';
@@ -11,14 +11,16 @@ import {EquipoComponent} from './equipo.component';
 import {PrincipalComponent} from './principal.component';
 import {FormJugadorComponent} from './formJugador.component';
 import {Login,LoginService} from './login.service';
+import {Book, BookService} from './book.service';
+import {BookDetailComponent} from './book-detail.component';
+import {BookFormComponent} from './book-form.component';
 
 
 @Component({
 	selector: 'app',
 	templateUrl: 'app/html/app.component.html',
-	providers: [LoginService],
+	providers: [LoginService, BookService],
   directives: [HeaderComponent, FooterComponent, ROUTER_DIRECTIVES],
-
 })
 
 @RouteConfig([
@@ -30,18 +32,25 @@ import {Login,LoginService} from './login.service';
 	{path:'/jugador', name: 'Jugador', component: JugadorComponent},
 	{path:'/equipo', name: 'Equipo', component: EquipoComponent},
 	{path:'/formJugador', name: 'FormJugador', component: FormJugadorComponent},
+	{path: '/book/:id', name: 'BookDetail', component: BookDetailComponent},
+	{path: '/book/new', name: 'BookNew', component: BookFormComponent},
+	{path: '/book/edit/:id', name: 'BookEdit', component: BookFormComponent},
 ])
 
 export class AppComponent implements OnInit {
 	login : Login;
+	books: Book[];
 
-		constructor (private router:Router,private loginService: LoginService){}
+		constructor (private router:Router, private service: BookService, private loginService: LoginService){}
 
 		ngOnInit(){
 			this.service.login(email,password).subscribe(
 				login => this.login.usuario = email.value,
 				error => console.log(error)
 			);
+			this.service.getBooks().subscribe(
+        books => this.books = books,
+        error => console.log(error)
+      );
 		}
-
 }

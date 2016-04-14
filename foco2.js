@@ -1,31 +1,31 @@
 $(document).ready(inicializarEventos);
 
 function inicializarEventos() {
-    var x = $("#name");
-    x.focus(tomaFoco);
-    x.blur(pierdeFoco);
     x = $("#fullname");
     x.focus(tomaFoco);
     x.blur(pierdeFoco);
     x = $("#stadium");
     x.focus(tomaFoco);
     x.blur(pierdeFoco);
-    x = $("#capacity");
+    x = $("#description");
     x.focus(tomaFoco);
     x.blur(pierdeFoco);
-    x = $("#location");
+    x = $("#history");
     x.focus(tomaFoco);
     x.blur(pierdeFoco);
-    x = $("#foundation");
+    x = $("#coach");
     x.focus(tomaFoco);
     x.blur(pierdeFoco);
-    x = $("#nacionality");
+    x = $("#delegate");
     x.focus(tomaFoco);
     x.blur(pierdeFoco);
-    x = $("#nickname");
+    x = $("#secdelegate");
     x.focus(tomaFoco);
     x.blur(pierdeFoco);
-    x = $("#partners");
+    x = $("#physioterapist");
+    x.focus(tomaFoco);
+    x.blur(pierdeFoco);
+    x = $("#goalkeepercoach");
     x.focus(tomaFoco);
     x.blur(pierdeFoco);
 }
