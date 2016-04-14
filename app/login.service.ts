@@ -14,7 +14,8 @@ export class Login {
 export class LoginService {
 
   private log = [
-    new Login('a', '1234', false)
+    new Login('admin', '1234', false)
+    new Login('capitan', '5678', false)
   ];
 
   getLog() {
