@@ -17,12 +17,8 @@ export class LoginService {
     new Login('a', '1234', false)
   ];
 
-  getLog(usuario: string){
-    return this.log.isLogged;
-  }
-
-  setLog(usuario: string){
-    this.log.isLogged = false;
+  getLog() {
+    return withObserver(this.log);
   }
 
   login(email, password){
@@ -32,7 +28,6 @@ export class LoginService {
         break;
       }
     }
-    return withObserver(this.log);
 	}
 
 	logout(){

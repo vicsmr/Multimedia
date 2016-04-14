@@ -38,14 +38,14 @@ import {TeamFormComponent} from './team-form.component';
 ])
 
 export class AppComponent implements OnInit {
-	login : Login;
 	teams: Team[];
+	login : Login[];
 
 		constructor (private router:Router, private service: TeamService, private loginService: LoginService){}
 
 		ngOnInit(){
-			this.service.login(email,password).subscribe(
-				login => this.login.usuario = email.value,
+			this.loginService.getLog().subscribe(
+				login => this.login = login,
 				error => console.log(error)
 			);
 			this.service.getTeams().subscribe(
@@ -53,4 +53,5 @@ export class AppComponent implements OnInit {
         error => console.log(error)
       );
 		}
+
 }
