@@ -54,4 +54,12 @@ export class AppComponent implements OnInit {
       );
 		}
 
+		logIn() {
+			this.loginService.logIn(this.login);
+		}
+
+		logFuera() {
+			this.loginService.logFuera();
+		}
+
 }

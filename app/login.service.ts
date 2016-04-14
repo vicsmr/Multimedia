@@ -21,16 +21,16 @@ export class LoginService {
     return withObserver(this.log);
   }
 
-  login(email, password){
+  logIn(logi:Login){
     for(let i=0; i<this.log.length; i++){
-      if(this.log[i].usuario === email.value && this.log[i].contrasena === password.value){
+      if(this.log[i].usuario === logi.usuario && this.log[i].contrasena === logi.contrasena){
         this.log.isLogged = true;
         break;
       }
     }
 	}
 
-	logout(){
+	logFuera(){
 		this.log.isLogged = false;
 	}
 }

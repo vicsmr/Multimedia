@@ -24,20 +24,20 @@
                               <label for="recipient-name" class="control-label"><h3>User</h3></label>
                               <div class="input-group input-group-lg">
                                  <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-user"></span></span>
-                                  <input name="email" #email type="text" class="form-control" placeholder="User" aria-describedby="sizing-addon1">
+                                  <input name="email" [(ngModel)]= "login.usuario" type="text" class="form-control" placeholder="usuario" aria-describedby="sizing-addon1">
                               </div>
                             </div>
                             <div class="form-group">
                               <label for="message-text" class="control-label"><h3>Password</h3></label>
                               <div class="input-group input-group-lg">
                                  <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-lock"></span></span>
-                                  <input name="password" #password type="password" class="form-control" placeholder="Password" aria-describedby="sizing-addon1">
+                                  <input name="password" [(ngModel)]= "login.contrasena" type="password" class="form-control" placeholder="contrasena" aria-describedby="sizing-addon1">
                               </div>
                             </div>
                           </form>
                         </div>
                         <div class="modal-footer">
-                          <button (click)= "login(email,password)" data-dismiss="modal" type="button" class="btn btn-primary" >Login</button>
+                          <button (click)= "logIn()" data-dismiss="modal" type="button" class="btn btn-primary" >Login</button>
                         </div>
                       </div>
                     </div>
@@ -45,7 +45,8 @@
                 </div>
             </div>
             <section class="logout" *ngIf="login.isLogged">
-              <button (click)="logout()">Cerrar Sesión</button>
+              <span>Hola, {{login.usuario}}</span>
+              <button (click)="logFuera()">Cerrar Sesión</button>
             </section>
         </div>
   </div>
