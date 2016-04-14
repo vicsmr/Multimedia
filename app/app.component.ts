@@ -11,15 +11,15 @@ import {EquipoComponent} from './equipo.component';
 import {PrincipalComponent} from './principal.component';
 import {FormJugadorComponent} from './formJugador.component';
 import {Login,LoginService} from './login.service';
-import {Book, BookService} from './book.service';
-import {BookDetailComponent} from './book-detail.component';
-import {BookFormComponent} from './book-form.component';
+import {Team, TeamService} from './team.service';
+import {TeamDetailComponent} from './team-detail.component';
+import {TeamFormComponent} from './team-form.component';
 
 
 @Component({
 	selector: 'app',
 	templateUrl: 'app/html/app.component.html',
-	providers: [LoginService, BookService],
+	providers: [LoginService, TeamService],
   directives: [HeaderComponent, FooterComponent, ROUTER_DIRECTIVES],
 })
 
@@ -32,24 +32,24 @@ import {BookFormComponent} from './book-form.component';
 	{path:'/jugador', name: 'Jugador', component: JugadorComponent},
 	{path:'/equipo', name: 'Equipo', component: EquipoComponent},
 	{path:'/formJugador', name: 'FormJugador', component: FormJugadorComponent},
-	{path: '/book/:id', name: 'BookDetail', component: BookDetailComponent},
-	{path: '/book/new', name: 'BookNew', component: BookFormComponent},
-	{path: '/book/edit/:id', name: 'BookEdit', component: BookFormComponent},
+	{path: '/team/:id', name: 'TeamDetail', component: TeamDetailComponent},
+	{path: '/team/new', name: 'TeamNew', component: TeamFormComponent},
+	{path: '/team/edit/:id', name: 'TeamEdit', component: TeamFormComponent},
 ])
 
 export class AppComponent implements OnInit {
 	login : Login;
-	books: Book[];
+	teams: Team[];
 
-		constructor (private router:Router, private service: BookService, private loginService: LoginService){}
+		constructor (private router:Router, private service: TeamService, private loginService: LoginService){}
 
 		ngOnInit(){
 			this.service.login(email,password).subscribe(
 				login => this.login.usuario = email.value,
 				error => console.log(error)
 			);
-			this.service.getBooks().subscribe(
-        books => this.books = books,
+			this.service.getTeams().subscribe(
+        teams => this.teams = teams,
         error => console.log(error)
       );
 		}

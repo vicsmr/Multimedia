@@ -1,6 +1,6 @@
 import {Component, OnInit} from 'angular2/core';
 import {ROUTER_DIRECTIVES, RouteParams, Router} from 'angular2/router';
-import {Book, BookService}   from './book.service';
+import {Team, TeamService}   from './team.service';
 
 @Component({
   selector: 'teams',
@@ -10,18 +10,18 @@ import {Book, BookService}   from './book.service';
 })
 
 export class TeamsComponent implements OnInit {
-  books: Book[];
+  teams: Team[];
 
-  constructor(private router:Router, private service: BookService) {}
+  constructor(private router:Router, private service: TeamService) {}
 
   ngOnInit(){
-      this.service.getBooks().subscribe(
-        books => this.books = books,
+      this.service.getTeams().subscribe(
+        teams => this.teams = teams,
         error => console.log(error)
       );
     }
 
-    newBook() {
-      this.router.navigate(['BookNew']);
+    newTeam() {
+      this.router.navigate(['TeamNew']);
     }
 }
