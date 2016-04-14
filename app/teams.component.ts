@@ -1,5 +1,6 @@
-import {Component} from 'angular2/core';
-import {ROUTER_DIRECTIVES} from 'angular2/router';
+import {Component, OnInit} from 'angular2/core';
+import {ROUTER_DIRECTIVES, RouteParams, Router} from 'angular2/router';
+import {Book, BookService}   from './book.service';
 
 @Component({
   selector: 'teams',
@@ -8,4 +9,19 @@ import {ROUTER_DIRECTIVES} from 'angular2/router';
   styleUrls: ['app/css/teams.component.css']
 })
 
-export class TeamsComponent {}
+export class TeamsComponent implements OnInit {
+  books: Book[];
+
+  constructor(private router:Router, private service: BookService) {}
+
+  ngOnInit(){
+      this.service.getBooks().subscribe(
+        books => this.books = books,
+        error => console.log(error)
+      );
+    }
+
+    newBook() {
+      this.router.navigate(['BookNew']);
+    }
+}

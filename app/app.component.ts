@@ -1,5 +1,5 @@
-import {Component} from 'angular2/core';
-import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
+import {Component, OnInit} from 'angular2/core';
+import {RouteConfig, RouteParams, Router, ROUTER_DIRECTIVES} from 'angular2/router';
 import {HeaderComponent} from './header.component';
 import {FooterComponent} from './footer.component';
 import {ClasificationComponent} from './clasification.component';
@@ -10,12 +10,16 @@ import {JugadorComponent} from './jugador.component';
 import {EquipoComponent} from './equipo.component';
 import {PrincipalComponent} from './principal.component';
 import {FormJugadorComponent} from './formJugador.component';
+import {Book, BookService} from './book.service';
+import {BookDetailComponent} from './book-detail.component';
+import {BookFormComponent} from './book-form.component';
 
 
 @Component({
 	selector: 'app',
 	templateUrl: 'app/html/app.component.html',
   directives: [HeaderComponent, FooterComponent, ROUTER_DIRECTIVES],
+	providers:  [BookService],
 })
 
 @RouteConfig([
@@ -27,12 +31,15 @@ import {FormJugadorComponent} from './formJugador.component';
 	{path:'/jugador', name: 'Jugador', component: JugadorComponent},
 	{path:'/equipo', name: 'Equipo', component: EquipoComponent},
 	{path:'/formJugador', name: 'FormJugador', component: FormJugadorComponent},
+	{path: '/book/:id', name: 'BookDetail', component: BookDetailComponent},
+	{path: '/book/new', name: 'BookNew', component: BookFormComponent},
+	{path: '/book/edit/:id', name: 'BookEdit', component: BookFormComponent},
 ])
 
-export class AppComponent {
+export class AppComponent implements OnInit {
 
 	public isLogged: boolean;
-	constructor(){
+	constructor(private router:Router, private service: BookService){
 		this.isLogged = false;
 	}
 	login(email, password){
@@ -43,5 +50,14 @@ export class AppComponent {
 	logout(){
 		this.isLogged = false;
 	}
-}
+
+	books: Book[];
+
+  ngOnInit(){
+      this.service.getBooks().subscribe(
+        books => this.books = books,
+        error => console.log(error)
+      );
+    }
+
 }
