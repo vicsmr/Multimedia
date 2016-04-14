@@ -10,7 +10,7 @@
       <div class="row">
         <div class="col-md-10 col-sm-10 xs-hidden"></div>
         <div class="col-md-2 col-sm-2 col-xs-12">
-          <button (click)="newBook()" id="botonAgregar" (click)="gotoFormJugador()"><img src="http://es.downloadicons.net/sites/default/files/agregar-icono-3079.png"> Add Team</button>
+          <button (click)="newTeam()" id="botonAgregar" (click)="gotoFormJugador()"><img src="http://es.downloadicons.net/sites/default/files/agregar-icono-3079.png"> Add Team</button>
         </div>
       </div>
       <div class="row">
@@ -18,8 +18,8 @@
         <div class="col-md-10 col-xs-12 col-sm-10">
           <div class="list-group">
               <li id="equipos" class="list-group-item">League's teams</li>
-              <div id="columnas" class="col-md-6" *ngFor="#book of books">
-                <a class="list-group-item" [routerLink]="['BookDetail', {id: book.id}]"><img src={{book.abstract}}> {{book.title}}</a>
+              <div id="columnas" class="col-md-6" *ngFor="#team of teams">
+                <a class="list-group-item" [routerLink]="['TeamDetail', {id: team.id}]"><img src={{team.abstract}}> {{team.fullname}}</a>
               </div>
               <div id="columnas" class="col-md-6">
               </div>

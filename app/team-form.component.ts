@@ -7,10 +7,10 @@ import {Team, TeamService}   from './team.service';
   <div id="principal" class="container">
             <ol id="breadcrumb">
                 <li>
-                    <a href="Pruebas.html"><img class="img-rounded" src=http://4.bp.blogspot.com/_A0w2msagD40/SSrCvRwW5cI/AAAAAAAACb8/guoEtikOYSc/s1600/imagen_flecha_derecha%5B1%5D.gif>Home</a>
+                    <a href="Pruebas.html"><img class="img-rounded" src="http://4.bp.blogspot.com/_A0w2msagD40/SSrCvRwW5cI/AAAAAAAACb8/guoEtikOYSc/s1600/imagen_flecha_derecha%5B1%5D.gif">Home</a>
                 </li>
                 <li id="raya">/</li>
-                <li><a href="#">New Team</a>
+                <li><a id="active">New Team</a>
                 </li>
             </ol>
             <div id="cuerpo">
@@ -132,7 +132,7 @@ import {Team, TeamService}   from './team.service';
                                     </div>
 
                                     <div class="col-xs-6">
-                                        <input type='submit' name='enviar' value='Submit' />
+                                        <input (click)="save()" type='submit' name='enviar' value='Submit' />
                                     </div>
                                 </form>
                             </div>
@@ -144,7 +144,8 @@ import {Team, TeamService}   from './team.service';
                     </div>
                 </div>
             </div>
-  `
+  `,
+  styleUrls: ["app/css/formEquipo.component.css"],
 })
 export class TeamFormComponent {
 

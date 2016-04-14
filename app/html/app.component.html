@@ -65,8 +65,8 @@
               <li class="active"><a [routerLink]="['Principal']">Home</a></li>
               <li id="teams"><a [routerLink]="['Teams']">Teams</a>
                   <ul class="nav navbar-nav hidden-xs">
-                      <li *ngFor="#book of books">
-                          <a [routerLink]="['BookDetail', {id: book.id}]"><img class="img-rounded" src={{book.abstract}}> {{book.title}}</a>
+                      <li *ngFor="#team of teams">
+                          <a [routerLink]="['TeamDetail', {id: team.id}]"><img class="img-rounded" src={{team.abstract}}> {{team.fullname}}</a>
                       </li>
                       <!-- <li>
                           <a href="#"><img class="img-rounded" src="http://heycdn.thisisfootball.com/wp-content/uploads/2013/09/xfc-dallas-logo-64x64.png.pagespeed.ic.7Z29WTYJC9.png">FC Dallas</a>
