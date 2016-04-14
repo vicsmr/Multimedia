@@ -349,21 +349,6 @@ input:focus {
     outline: none;
 }
 
-#galeria {
-    background-image: url(http://publicdomainvectors.org/photos/fussball.png);
-    height: 435px;
-}
-
-#galeria1 {
-    background-image: url(http://www.futbolpollas.co/assets/img/backgrounds/1.jpg);
-    height: 597px;
-}
-
-#galeria2 {
-    background-image: url(http://www.futbolpollas.co/assets/img/backgrounds/1.jpg);
-    height: 597px;
-}
-
 #footer {
     text-align: center;
     color: black;
