@@ -38,14 +38,14 @@ import {BookFormComponent} from './book-form.component';
 ])
 
 export class AppComponent implements OnInit {
-	login : Login;
+	login : Login[];
 	books: Book[];
 
 		constructor (private router:Router, private service: BookService, private loginService: LoginService){}
 
 		ngOnInit(){
-			this.service.login(email,password).subscribe(
-				login => this.login.usuario = email.value,
+			this.loginService.getLog().subscribe(
+				login => this.login = login,
 				error => console.log(error)
 			);
 			this.service.getBooks().subscribe(
@@ -53,4 +53,5 @@ export class AppComponent implements OnInit {
         error => console.log(error)
       );
 		}
+
 }
