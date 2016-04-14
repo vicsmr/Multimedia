@@ -1,5 +1,6 @@
-import {Component} from 'angular2/core';
+import {Component, OnInit} from 'angular2/core';
 import {ROUTER_DIRECTIVES, Router} from 'angular2/router';
+import {Team, TeamService}   from './team.service';
 
 @Component({
 	selector: 'schedule1',
@@ -10,10 +11,19 @@ import {ROUTER_DIRECTIVES, Router} from 'angular2/router';
 
 export class Schedule1Component {
 
-	constructor(private router: Router) {
+	teams: Team[];
+
+	constructor(private router: Router, private service: TeamService) {
 	}
 
 	gotoSchedule2() {
     this.router.navigate(['Schedule2']);
   }
+
+	ngOnInit(){
+		this.service.getTeams().subscribe(
+			teams => this.teams = teams,
+			error => console.log(error)
+		);
+	}
 }
