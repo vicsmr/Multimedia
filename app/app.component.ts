@@ -1,5 +1,5 @@
-import {Component} from 'angular2/core';
-import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
+import {Component,OnInit} from 'angular2/core';
+import {RouteConfig, Router, ROUTER_DIRECTIVES,RouteParams} from 'angular2/router';
 import {HeaderComponent} from './header.component';
 import {FooterComponent} from './footer.component';
 import {ClasificationComponent} from './clasification.component';
@@ -10,12 +10,15 @@ import {JugadorComponent} from './jugador.component';
 import {EquipoComponent} from './equipo.component';
 import {PrincipalComponent} from './principal.component';
 import {FormJugadorComponent} from './formJugador.component';
+import {Login,LoginService} from './login.service';
 
 
 @Component({
 	selector: 'app',
 	templateUrl: 'app/html/app.component.html',
+	providers: [LoginService],
   directives: [HeaderComponent, FooterComponent, ROUTER_DIRECTIVES],
+
 })
 
 @RouteConfig([
@@ -29,19 +32,16 @@ import {FormJugadorComponent} from './formJugador.component';
 	{path:'/formJugador', name: 'FormJugador', component: FormJugadorComponent},
 ])
 
-export class AppComponent {
+export class AppComponent implements OnInit {
+	login : Login;
 
-	public isLogged: boolean;
-	constructor(){
-		this.isLogged = false;
-	}
-	login(email, password){
-		if(email.value =="test" && password.value=="test"){
-			this.isLogged = true;
+		constructor (private router:Router,private loginService: LoginService){}
+
+		ngOnInit(){
+			this.service.login(email,password).subscribe(
+				login => this.login.usuario = email.value,
+				error => console.log(error)
+			);
 		}
-	}
-	logout(){
-		this.isLogged = false;
-	}
-}
+
 }

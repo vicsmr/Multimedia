@@ -1,5 +1,6 @@
 import {Component} from 'angular2/core';
 import {ROUTER_DIRECTIVES} from 'angular2/router';
+import {Login,LoginService} from './login.service';
 
 @Component({
 	selector: 'header',
@@ -9,5 +10,5 @@ import {ROUTER_DIRECTIVES} from 'angular2/router';
 })
 
 export class HeaderComponent {
-
+	login: Login;
 }
