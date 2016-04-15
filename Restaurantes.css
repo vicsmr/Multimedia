@@ -1,0 +1,34 @@
+.list-group{
+    margin-top: 40px;
+}
+
+#restaurantes{
+    text-align: center;
+    background-color: #f8c143;
+}
+
+#columnas1{
+    padding-right: 0px;
+}
+
+#columnas2{
+    padding-left: 0px;
+}
+
+.list-group img{
+    width: 250px;
+}
+
+.list-group a{
+    border-width: 2px;
+    border-style: solid;
+    border-color: #c5c0d9;
+}
+
+.list-group #title{
+    font-size: 30px;
+}
+
+#direccion{
+    font-weight: bold;
+}
