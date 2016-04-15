@@ -7,6 +7,10 @@
     background-color: #f8c143;
 }
 
+#restaurantes img{
+    width: 30px;
+}
+
 #columnas1{
     padding-right: 0px;
 }
@@ -15,14 +19,16 @@
     padding-left: 0px;
 }
 
-.list-group img{
+.list-group a img{
     width: 250px;
+    height: 150px
 }
 
 .list-group a{
     border-width: 2px;
     border-style: solid;
     border-color: #c5c0d9;
+    height: 250px;
 }
 
 .list-group #title{
