@@ -32,7 +32,7 @@
                                       <div class="col-xs-6">
                                           <p>
                                               <b>Stadium*:</b>
-                                              <input [(ngModel)]="team.abstract" type='text' class="form-control" name='stadium' placeholder="Stadium" id="stadium" required/>
+                                              <input [(ngModel)]="team.imgescudo" type='text' class="form-control" name='stadium' placeholder="Stadium" id="stadium" required/>
                                           </p>
                                       </div>
 
@@ -46,7 +46,7 @@
                                       <div class="col-xs-6">
                                           <p>
                                               <b>History*:</b>
-                                              <textarea class="form-control" rows="5" name="history" placeholder="Add a little description about the history of the team" id="history"></textarea>
+                                              <textarea [(ngModel)]="team.history" class="form-control" rows="5" name="history" placeholder="Add a little description about the history of the team" id="history"></textarea>
                                           </p>
                                       </div>
 

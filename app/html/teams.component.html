@@ -19,7 +19,7 @@
           <div class="list-group">
               <li id="equipos" class="list-group-item">League's teams</li>
               <div id="columnas" class="col-md-6" *ngFor="#team of teams">
-                <a class="list-group-item" [routerLink]="['TeamDetail', {id: team.id}]"><img src={{team.abstract}}> {{team.fullname}}</a>
+                <a class="list-group-item" [routerLink]="['TeamDetail', {id: team.id}]"><img src={{team.imgescudo}}> {{team.fullname}}</a>
               </div>
               <div id="columnas" class="col-md-6">
               </div>
