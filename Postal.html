@@ -43,12 +43,12 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="Pruebas.html" class="navbar-brand">Valencia</a>
+                <a href="index.html" class="navbar-brand">Valencia</a>
             </div>
 
             <div id="navbarCollapse" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="Pruebas.html">Inicio</a></li>
+                    <li><a href="index.html">Inicio</a></li>
                     <li id="teams"><a href="Visitar.html">¿Qué visitar?</a></li>
                     <li id="schedule"><a href="Restaurantes.html">¿Dónde comer?</a></li>
                     <li class="active"><a href="Postal.html">Postales</a></li>
@@ -63,26 +63,13 @@
                 </form>
             </div>
         </nav>
-        <!--Título-->
-        <p><H2>Mi formulario HTML</H2></p>
-        <!--Formulario-->
-        <FORM id="contacto" name="contacto" action="enviar.php" method="POST">
-        <p>
-        <label>Nombre <input name="nombre" type="text" id="nombre"
-         size="42"/></label>
-        </p>
-        <p>
-        <label>Empresa
-        <input name="empresa" type="text" id="empresa" size="31"/></label></p>
-        <p><label>E-mail <input name="mail" type="text" id="mail" size="43"/>
-        </label>
-        </p>
-        <p><label>Mensaje<br>
-        <textarea name="mensaje" cols="40" rows="8" id="mensaje">
-        </textarea></label>
-        </p>
-        <p><input type="submit" name="Submit" value="Enviar"/></p>
-        </FORM>
+        <form action="enviar.php" method="post">
+        First Name: <input type="text" name="first_name"><br>
+        Last Name: <input type="text" name="last_name"><br>
+        Email: <input type="text" name="email"><br>
+        Message:<br><textarea rows="5" name="message" cols="30"></textarea><br>
+        <input type="submit" name="submit" value="Submit">
+        </form>
         <div id="footer">
             <div class="col-md-12 col-xs-12">
                 Dessign by Amunt Corporation (Fernando Lopez, Víctor Sánchez)
