@@ -7,19 +7,21 @@ import {TeamsComponent} from './teams.component';
 import {Schedule1Component} from './schedule1.component';
 import {Schedule2Component} from './schedule2.component';
 import {JugadorComponent} from './jugador.component';
-import {EquipoComponent} from './equipo.component';
 import {PrincipalComponent} from './principal.component';
 import {FormJugadorComponent} from './formJugador.component';
 import {Login,LoginService} from './login.service';
 import {Team, TeamService} from './team.service';
 import {TeamDetailComponent} from './team-detail.component';
 import {TeamFormComponent} from './team-form.component';
+import {PlayerDetailComponent} from './player-detail.component';
+import {Player, PlayerService} from './player.service';
+import {PlayerFormComponent} from './player-form.component';
 
 
 @Component({
 	selector: 'app',
 	templateUrl: 'app/html/app.component.html',
-	providers: [LoginService, TeamService],
+	providers: [LoginService, TeamService, PlayerService],
   directives: [HeaderComponent, FooterComponent, ROUTER_DIRECTIVES],
 })
 
@@ -30,11 +32,13 @@ import {TeamFormComponent} from './team-form.component';
 	{path:'/schedule1', name: 'Schedule1', component: Schedule1Component},
 	{path:'/schedule2', name: 'Schedule2', component: Schedule2Component},
 	{path:'/jugador', name: 'Jugador', component: JugadorComponent},
-	{path:'/equipo', name: 'Equipo', component: EquipoComponent},
 	{path:'/formJugador', name: 'FormJugador', component: FormJugadorComponent},
 	{path: '/team/:id', name: 'TeamDetail', component: TeamDetailComponent},
 	{path: '/team/new', name: 'TeamNew', component: TeamFormComponent},
 	{path: '/team/edit/:id', name: 'TeamEdit', component: TeamFormComponent},
+	{path: '/player/:id', name: 'PlayerDetail', component: PlayerDetailComponent},
+	{path: '/player/new', name: 'PlayerNew', component: PlayerFormComponent},
+	{path: '/player/edit/:id', name: 'PlayerEdit', component: PlayerFormComponent},
 ])
 
 export class AppComponent implements OnInit {

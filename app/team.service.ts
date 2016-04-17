@@ -1,6 +1,7 @@
 import {Injectable} from 'angular2/core';
 import {Observable} from 'rxjs/Observable';
 import {withObserver} from './utils';
+import {Player, PlayerService}   from './player.service';
 
 export class Team {
 
@@ -11,6 +12,7 @@ export class Team {
     public imgequipo: string,
     public description: string,
     public history: string,
+    public players: Player[],
     ) {}
 
 }
@@ -30,7 +32,7 @@ export class TeamService {
 
   getTeam(id: number | string) {
     let team = this.teams.filter(h => h.id === +id)[0]
-    return withObserver(new Team(team.id, team.fullname, team.imgescudo, team.imgequipo, team.description, team.history));
+    return withObserver(new Team(team.id, team.fullname, team.imgescudo, team.imgequipo, team.description, team.history, team.players));
   }
 
   removeTeam(team: Team){
@@ -51,6 +53,7 @@ export class TeamService {
       oldTeam.imgequipo = team.imgequipo;
       oldTeam.description = team.description;
       oldTeam.history = team.history;
+      oldTeam.players = team.players;
     } else {
       team.id = this.teams.length+1;
       this.teams.push(team);

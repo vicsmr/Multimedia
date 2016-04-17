@@ -17,7 +17,7 @@
               </div>
           </div>
           <div class="col-md-2 col-sm-2 col-xs-12">
-            <button id="botonAgregar" (click)="gotoFormJugador()"><img src="http://es.downloadicons.net/sites/default/files/agregar-icono-3079.png"> Add Player</button>
+            <button id="botonAgregar" (click)="newPlayer()"><img src="http://es.downloadicons.net/sites/default/files/agregar-icono-3079.png"> Add Player</button>
           </div>
       </div>
       <div class="container">
@@ -57,8 +57,11 @@
                                   <th>Nacionality</th>
                               </tr>
                           </thead>
-                          <tbody>
-                              <tr>
+                          <tbody *ngFor="#player of players">
+                              <tr *ngIf="team.fullname == player.equipo">
+                                <td><a [routerLink]="['PlayerDetail', {id: player.id}]">{{player.name}}</a></td>
+                              </tr>
+                              <!-- <tr>
                                   <td>Evan</td>
                                   <td>Bush</td>
                                   <td>Goalkeeper</td>
@@ -95,7 +98,7 @@
                                   <td>Forward</td>
                                   <td><img src="http://ohla.tv/uploads/3/4/7/5/34759513/9999192_orig.png">
                                   </td>
-                              </tr>
+                              </tr> -->
                           </tbody>
                       </table>
                   </div>

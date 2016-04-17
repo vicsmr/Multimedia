@@ -20,7 +20,7 @@
                                     <div class="col-xs-6">
                                         <p>
                                             <b>Name*:</b>
-                                            <input type='text' class="form-control" name='name' placeholder="Name" id="name" required/>
+                                            <input [(ngModel)]="player.name" type='text' class="form-control" name='name' placeholder="Name" id="name" required/>
                                         </p>
                                     </div>
 
@@ -96,7 +96,7 @@
                                     </div>
 
                                     <div class="col-xs-6">
-                                        <input type='submit' name='enviar' value='Submit' />
+                                        <input (click)="save()" type='submit' name='enviar' value='Submit' />
                                     </div>
                                 </fieldset>
                             </form>
