@@ -93,6 +93,9 @@
 
                                     <div class="col-xs-12">
                                         <p>
+                                            <b>Equipo*:</b>
+                                            <select [(ngModel)]="player.equipo" name="Equipo" class="form-control" id="team">
+                                                <option *ngFor="#team of teams"><img src={{team.imgescudo}}> {{team.fullname}}</option>
                                             </select>
                                         </p>
                                     </div>
