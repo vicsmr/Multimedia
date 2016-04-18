@@ -27,7 +27,7 @@
                                     <div class="col-xs-6">
                                         <p>
                                             <b>Surnames*:</b>
-                                            <input type='text' class="form-control" name='surnames' placeholder="Surnames" id="surnames" required/>
+                                            <input [(ngModel)]="player.lastname" type='text' class="form-control" name='surnames' placeholder="Surnames" id="surnames" required/>
                                         </p>
                                     </div>
 
@@ -48,7 +48,7 @@
                                     <div class="col-xs-6">
                                         <p>
                                             <b>Position*:</b>
-                                            <select name="Position" class="form-control" id="position">
+                                            <select [(ngModel)]="player.position" name="Position" class="form-control" id="position">
                                                 <option value="Goalkeeper">Goalkeeper</option>
                                                 <option value="Defense">Defense</option>
                                                 <option value="Midfield">Midfield</option>
