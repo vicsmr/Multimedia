@@ -43,7 +43,6 @@ import {PlayerFormComponent} from './player-form.component';
 
 export class AppComponent implements OnInit {
 	teams: Team[];
-	login : Login[];
 
 		constructor (private router:Router, private service: TeamService, private loginService: LoginService){}
 

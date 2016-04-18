@@ -5,7 +5,7 @@
           <span>Major League Football</span>
       </div>
       <div id="franja" class="panel-body">
-            <div id="login" *ngIf="!login.isLogged">
+            <div id="login" *ngIf="!loginService.isLogged">
                 <img src="https://cdn0.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/user-male-circle-blue-128.png" class="img-circle" alt="Login" width="35" height="35">
                 <div id="loginContainer">
                     <button id="loginButton" data-toggle="modal" data-target="#myModal"><span>Login</span><em></em></button>
@@ -44,7 +44,7 @@
                   </div>
                 </div>
             </div>
-            <section class="logout" *ngIf="login.isLogged">
+            <section class="logout" *ngIf="loginService.isLogged">
               <span>Hola, {{login.usuario}}</span>
               <button (click)="logFuera()">Cerrar Sesión</button>
             </section>

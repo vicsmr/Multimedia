@@ -6,16 +6,20 @@ export class Login {
 
   constructor(
     public usuario: string;
-    public contrasena: string;
-    public isLogged: boolean){}
+    public contrasena: string){}
 }
 
 @Injectable()
 export class LoginService {
 
+  public isLogged: boolean;
+  constructor(){
+    this.isLogged = false;
+  }
+
   private log = [
-    new Login('admin', '1234', false)
-    new Login('capitan', '5678', false)
+    new Login('admin', '1234')
+    new Login('capitan', '5678')
   ];
 
   getLog() {
@@ -25,13 +29,13 @@ export class LoginService {
   logIn(logi:Login){
     for(let i=0; i<this.log.length; i++){
       if(this.log[i].usuario === logi.usuario && this.log[i].contrasena === logi.contrasena){
-        this.log.isLogged = true;
+        this.isLogged = true;
         break;
       }
     }
 	}
 
 	logFuera(){
-		this.log.isLogged = false;
+		this.isLogged = false;
 	}
 }

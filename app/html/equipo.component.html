@@ -16,7 +16,7 @@
                   <h1>Information about teams: <small>{{team.fullname}}</small> <img src="{{team.imgescudo}}"></h1>
               </div>
           </div>
-          <div class="col-md-2 col-sm-2 col-xs-12">
+          <div *ngIf="loginService.isLogged" class="col-md-2 col-sm-2 col-xs-12">
             <button id="botonAgregar" (click)="newPlayer()"><img src="http://es.downloadicons.net/sites/default/files/agregar-icono-3079.png"> Add Player</button>
           </div>
       </div>
@@ -250,9 +250,11 @@
       </div>
   </div>
 </div>
-<p>
-  <button (click)="removeTeam()">Remove</button>
-  <button (click)="editTeam()">Edit</button>
-  <br>
-  <button (click)="gotoTeams()">All teams</button>
+<p *ngIf="loginService.isLogged">
+
+    <button (click)="removeTeam()">Remove</button>
+    <button (click)="editTeam()">Edit</button>
+    <br>
+    <button (click)="gotoTeams()">All teams</button>
+
 </p>

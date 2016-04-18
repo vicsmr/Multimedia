@@ -1,6 +1,7 @@
 import {Component, OnInit} from 'angular2/core';
 import {ROUTER_DIRECTIVES, RouteParams, Router} from 'angular2/router';
 import {Team, TeamService}   from './team.service';
+import {Login,LoginService} from './login.service';
 
 @Component({
   selector: 'teams',
@@ -12,7 +13,7 @@ import {Team, TeamService}   from './team.service';
 export class TeamsComponent implements OnInit {
   teams: Team[];
 
-  constructor(private router:Router, private service: TeamService) {}
+  constructor(private router:Router, private service: TeamService, private loginService: LoginService) {}
 
   ngOnInit(){
       this.service.getTeams().subscribe(

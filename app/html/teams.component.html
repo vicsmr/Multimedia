@@ -9,7 +9,7 @@
   <div id="cuerpo">
       <div class="row">
         <div class="col-md-10 col-sm-10 xs-hidden"></div>
-        <div class="col-md-2 col-sm-2 col-xs-12">
+        <div *ngIf="loginService.isLogged" class="col-md-2 col-sm-2 col-xs-12">
           <button (click)="newTeam()" id="botonAgregar" (click)="gotoFormJugador()"><img src="http://es.downloadicons.net/sites/default/files/agregar-icono-3079.png"> Add Team</button>
         </div>
       </div>

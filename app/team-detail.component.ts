@@ -2,6 +2,7 @@ import {Component, OnInit}  from 'angular2/core';
 import {ROUTER_DIRECTIVES, RouteParams, Router} from 'angular2/router';
 import {Team, TeamService}   from './team.service';
 import {Player, PlayerService}   from './player.service';
+import {Login,LoginService} from './login.service';
 
 @Component({
     templateUrl: 'app/html/equipo.component.html',
@@ -13,7 +14,7 @@ export class TeamDetailComponent implements OnInit {
     players: Player[];
     team: Team;
 
-    constructor(private router: Router, routeParams: RouteParams, private service: TeamService, private playerservice: PlayerService) {
+    constructor(private router: Router, routeParams: RouteParams, private service: TeamService, private playerservice: PlayerService, private loginService: LoginService) {
         let id = routeParams.get('id');
         service.getTeam(id).subscribe(
             team => this.team = team,
