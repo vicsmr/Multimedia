@@ -12,7 +12,6 @@ export class Team {
     public imgequipo: string,
     public description: string,
     public history: string,
-    public players: Player[],
     ) {}
 
 }
@@ -53,7 +52,6 @@ export class TeamService {
       oldTeam.imgequipo = team.imgequipo;
       oldTeam.description = team.description;
       oldTeam.history = team.history;
-      oldTeam.players = team.players;
     } else {
       team.id = this.teams.length+1;
       this.teams.push(team);

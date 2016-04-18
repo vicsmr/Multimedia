@@ -1,13 +1,14 @@
 import {Injectable} from 'angular2/core';
 import {Observable} from 'rxjs/Observable';
 import {withObserver} from './utils';
+import {Team}   from './team.service';
 
 export class Player {
 
   constructor(
     public id: number,
     public name: string,
-    public equipo: string,
+    public equipo: Team,
     ) {}
 
 }
@@ -16,9 +17,9 @@ export class Player {
 export class PlayerService {
 
   private players = [
-  	new Player(1, 'Pepe', 'New York City'),
-  	new Player(2, 'Manuel', 'Montreal Impact'),
-  	new Player(3, 'Fer', 'Columbus Crew'),
+  	new Player(1, 'Pepe', new Team(1, 'New York City',)),
+  	new Player(2, 'Manuel', new Team(2, 'Montreal Impact',)),
+  	new Player(3, 'Fer', new Team(3, 'Columbus Crew',)),
   ];
 
   getPlayers() {

@@ -12,7 +12,7 @@ export class PlayerFormComponent {
 
   newPlayer: boolean;
   player: Player;
-  teams: Team[];
+  team: Team;
 
   constructor(
     private router:Router,
@@ -21,13 +21,18 @@ export class PlayerFormComponent {
     private teamservice: TeamService){
 
       let id = routeParams.get('id');
-      if(id){
+      let orden = routeParams.get('orden');
+      if(orden){
         service.getPlayer(id).subscribe(
           player => this.player = player,
           error => console.error(error)
         );
         this.newPlayer = false;
       } else {
+        teamservice.getTeam(id).subscribe(
+          team => this.team = team,
+          error => console.error(error)
+        );
         this.player = new Player(undefined,'', '');
         this.newPlayer = true;
       }
@@ -45,6 +50,7 @@ export class PlayerFormComponent {
   }
 
   save() {
+    this.player.equipo = this.team;
     this.service.savePlayer(this.player);
     window.history.back();
   }
