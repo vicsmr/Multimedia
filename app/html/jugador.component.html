@@ -240,3 +240,10 @@
             </div>
         </div>
     </div>
+    <p *ngIf="loginService.isLogged">
+
+        <button (click)="removePlayer()">Remove</button>
+        <button (click)="editPlayer()">Edit</button>
+        <br>
+
+    </p>

@@ -58,7 +58,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
           </button>
-          <a href="#" class="navbar-brand">MLF</a>
+          <a [routerLink]="['Principal']" class="navbar-brand">MLF</a>
       </div>
 
       <div id="navbarCollapse" class="collapse navbar-collapse">
@@ -116,11 +116,11 @@
                       </li> -->
                   </ul>
               </li>
-              <li id="schedule"><a [routerLink]="['Schedule1']">Schedule</a>
+              <li id="schedule"><a [routerLink]="['ScheduleDetail', {id: 1}]">Schedule</a>
                   <ul class="nav navbar-nav hidden-xs">
-                      <li id="rounds"><a>First Round</a>
+                      <li id="numeros" *ngFor="#schedule of schedules"><a [routerLink]="['ScheduleDetail', {id: schedule.id}]">{{schedule.id}}</a>
                       </li>
-                      <li id="rounds"><a>Second Round</a>
+                      <!-- <li id="rounds"><a>Second Round</a>
                       </li>
                       <li id="numeros">
                           <a [routerLink]="['Schedule1']">1</a>
@@ -211,7 +211,7 @@
                       </li>
                       <li id="numeros">
                           <a href="#">30</a>
-                      </li>
+                      </li> -->
                   </ul>
               </li>
               <li><a [routerLink]="['Clasification']">Clasification</a></li>

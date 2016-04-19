@@ -44,10 +44,6 @@ export class TeamDetailComponent implements OnInit {
     }
 
     editTeam() {
-        this.router.navigate(['TeamEdit', { id: this.team.id }, { orden: 'edit' }]);
-    }
-
-    gotoTeams() {
-        this.router.navigate(['Teams']);
+        this.router.navigate(['TeamEdit', { id: this.team.id}]);
     }
 }

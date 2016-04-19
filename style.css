@@ -1,3 +1,22 @@
+#botonAgregar>img{
+    width: 40px;
+}
+
+#botonAgregar{
+    background-color: #12be20;
+    display:inline-block;
+    border:1px solid #899caa;
+    border-radius:5px;
+    position:relative;
+    cursor:pointer;
+    font-style: none;
+    color: white;
+}
+
+#botonAgregar:hover{
+    background-color: #72c378;
+}
+
 body {
     margin: 10px;
     background-image: url(http://www.bastida.biz/WebRoot/StoreES3/Shops/eb7627/4C4F/D4D5/A7AB/1277/8606/D94C/9B1E/E94E/04092gsalmon.jpg);

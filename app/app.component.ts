@@ -16,12 +16,15 @@ import {TeamFormComponent} from './team-form.component';
 import {PlayerDetailComponent} from './player-detail.component';
 import {Player, PlayerService} from './player.service';
 import {PlayerFormComponent} from './player-form.component';
+import {Schedule, ScheduleService} from './schedule.service';
+import {ScheduleDetailComponent} from './schedule-detail.component';
+import {ScheduleFormComponent} from './schedule-form.component';
 
 
 @Component({
 	selector: 'app',
 	templateUrl: 'app/html/app.component.html',
-	providers: [LoginService, TeamService, PlayerService],
+	providers: [LoginService, TeamService, PlayerService, ScheduleService],
   directives: [HeaderComponent, FooterComponent, ROUTER_DIRECTIVES],
 })
 
@@ -39,12 +42,16 @@ import {PlayerFormComponent} from './player-form.component';
 	{path: '/player/:id', name: 'PlayerDetail', component: PlayerDetailComponent},
 	{path: '/player/new', name: 'PlayerNew', component: PlayerFormComponent},
 	{path: '/player/edit/:id', name: 'PlayerEdit', component: PlayerFormComponent},
+	{path: '/schedule/:id', name: 'ScheduleDetail', component: ScheduleDetailComponent},
+	{path: '/schedule/new', name: 'ScheduleNew', component: ScheduleFormComponent},
+	{path: '/schedule/edit/:id', name: 'ScheduleEdit', component: ScheduleFormComponent},
 ])
 
 export class AppComponent implements OnInit {
 	teams: Team[];
+	schedules: Schedule[];
 
-		constructor (private router:Router, private service: TeamService, private loginService: LoginService){}
+		constructor (private router:Router, private service: TeamService, private loginService: LoginService, private scheduleService: ScheduleService){}
 
 		ngOnInit(){
 			this.loginService.getLog().subscribe(
@@ -53,6 +60,10 @@ export class AppComponent implements OnInit {
 			);
 			this.service.getTeams().subscribe(
         teams => this.teams = teams,
+        error => console.log(error)
+      );
+			this.scheduleService.getSchedules().subscribe(
+        schedules => this.schedules = schedules,
         error => console.log(error)
       );
 		}
