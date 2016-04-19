@@ -18,13 +18,14 @@ import {Player, PlayerService} from './player.service';
 import {PlayerFormComponent} from './player-form.component';
 import {Schedule, ScheduleService} from './schedule.service';
 import {ScheduleDetailComponent} from './schedule-detail.component';
-import {ScheduleFormComponent} from './schedule-form.component';
+import {Match, MatchService} from './match.service';
+import {MatchFormComponent} from './match-form.component';
 
 
 @Component({
 	selector: 'app',
 	templateUrl: 'app/html/app.component.html',
-	providers: [LoginService, TeamService, PlayerService, ScheduleService],
+	providers: [LoginService, TeamService, PlayerService, ScheduleService, MatchService],
   directives: [HeaderComponent, FooterComponent, ROUTER_DIRECTIVES],
 })
 
@@ -43,8 +44,8 @@ import {ScheduleFormComponent} from './schedule-form.component';
 	{path: '/player/new', name: 'PlayerNew', component: PlayerFormComponent},
 	{path: '/player/edit/:id', name: 'PlayerEdit', component: PlayerFormComponent},
 	{path: '/schedule/:id', name: 'ScheduleDetail', component: ScheduleDetailComponent},
-	{path: '/schedule/new', name: 'ScheduleNew', component: ScheduleFormComponent},
-	{path: '/schedule/edit/:id', name: 'ScheduleEdit', component: ScheduleFormComponent},
+	{path: '/match/new', name: 'MatchNew', component: MatchFormComponent},
+	{path: '/match/edit/:id', name: 'MatchEdit', component: MatchFormComponent},
 ])
 
 export class AppComponent implements OnInit {

@@ -7,15 +7,18 @@
             <li id="active">Schedule: Journey {{schedule.id}}</li>
         </ol>
         <div class="row">
-          <div class="col-md-10 col-sm-10 xs-hidden"></div>
+          <div class="col-md-8 col-sm-8 xs-hidden"></div>
           <div *ngIf="loginService.isLogged" class="col-md-2 col-sm-2 col-xs-12">
             <button (click)="save()" id="botonAgregar"><img src="http://es.downloadicons.net/sites/default/files/agregar-icono-3079.png"> Add Schedule</button>
+          </div>
+          <div *ngIf="loginService.isLogged" class="col-md-2 col-sm-2 col-xs-12">
+            <button (click)="newMatch()" id="botonAgregar"><img src="http://es.downloadicons.net/sites/default/files/agregar-icono-3079.png"> Add Match</button>
           </div>
         </div>
         <div id="cuerpo">
             <div class="row">
                 <div class="col-md-12 col-xs-12 col-sm-12">
-                    <span><h4>First Round</h4> Journeys:</span>
+                    <span>Journeys:</span>
                     <div class="btn-group" role="group" aria-label="Primera vuelta" *ngFor="#schedulefor of schedules">
                         <button (click)="gotoSchedule(schedulefor)" type="button" class="btn btn-default">{{schedulefor.id}}</button>
                         <!-- <input (click)="gotoSchedule2()" value="2" type="button" class="btn btn-default">
@@ -57,7 +60,7 @@
             </div>
             <div class="panel">
                 <div class="panel-heading">
-                    <h4>Journey 1</h4>
+                    <h4>Journey {{schedule.id}}</h4>
                 </div>
 
                 <table class="table">
@@ -69,11 +72,12 @@
                             <th></th>
                             <th></th>
                             <th>Visitor</th>
+                            <th *ngIf="loginService.isLogged"></th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td id="time">Friday 24 12:00 March</td>
+                    <tbody *ngFor="#match of matches">
+                        <tr *ngIf="schedule.id == match.schedule.id">
+                            <td id="time"><span>{{match.date}}</span></td>
                             <td>
                                 <a href="#"><img class="img-rounded" src="http://futhead.cursecdn.com/static/img/15/clubs/689.png">New York Red Bulls</a>
                             </td>
@@ -89,8 +93,12 @@
                             <td>
                                 <a href="#"><img class="img-rounded" src="http://www.moddingway.com/fifadb/teams/l687.png">Columbus Crew</a>
                             </td>
+                            <td *ngIf="loginService.isLogged">
+                              <button (click)="removeMatch(match)">Remove</button>
+                              <button (click)="editMatch(match.id)">Edit</button>
+                            </td>
                         </tr>
-                        <tr>
+                        <!-- <tr>
                             <td id="time">Friday 24 16:00 March</td>
                             <td>
                                 <a [routerLink]="['TeamNew']"><img class="img-rounded" src="http://www.bold.dk/img/tag/64x64/758.png">Montreal Impact</a>
@@ -215,7 +223,7 @@
                             <td>
                                 <a href="#"><img class="img-rounded" src="http://futhead.cursecdn.com/static/img/15/clubs/694.png">Colorado Rapids</a>
                             </td>
-                        </tr>
+                        </tr> -->
                     </tbody>
                 </table>
             </div>

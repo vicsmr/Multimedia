@@ -1,7 +1,7 @@
 import {Injectable} from 'angular2/core';
 import {Observable} from 'rxjs/Observable';
 import {withObserver} from './utils';
-import {Team}   from './team.service';
+import {Team} from './team.service';
 
 export class Player {
 

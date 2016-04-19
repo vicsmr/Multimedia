@@ -1,4 +1,4 @@
-import {Component, OnInit}  from 'angular2/core';
+import {Component}  from 'angular2/core';
 import {RouteParams, Router} from 'angular2/router';
 import {Player, PlayerService}   from './player.service';
 import {Team, TeamService}   from './team.service';
@@ -37,13 +37,6 @@ export class PlayerFormComponent {
         this.newPlayer = true;
       }
   }
-
-  ngOnInit(){
-      this.teamservice.getTeams().subscribe(
-        teams => this.teams = teams,
-        error => console.log(error)
-      );
-    }
 
   cancel() {
     window.history.back();
