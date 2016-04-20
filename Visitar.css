@@ -11,6 +11,11 @@
     width: 30px;
 }
 
+.list-group a img {
+    width: 250px;
+    height: 150px
+}
+
 #columnas1 {
     padding-right: 0px;
 }
