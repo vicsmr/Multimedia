@@ -23,15 +23,15 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>1 <img class="img-rounded" src="https://images-na.ssl-images-amazon.com/images/I/31QzyOljSGL._SS40_.jpg">
+                                <tr *ngFor="#team of teams; #posicion=index">
+                                    <td> {{posicion + 1}} <img *ngIf = "posicion===0"  class="img-rounded" src="https://images-na.ssl-images-amazon.com/images/I/31QzyOljSGL._SS40_.jpg">
                                     </td>
                                     <td>
-                                        <a href="#" alt="Enlace:New York"><img class="img-rounded" src="http://futhead.cursecdn.com/static/img/15/clubs/689.png">New York Red Bulls</a>
+                                        <a [routerLink]="['TeamDetail', {id: team.id}]"><img src={{team.imgescudo}}> {{team.fullname}}</a>
                                     </td>
-                                    <td>35</td>
+                                    <td>{{team.points}}</td>
                                 </tr>
-                                <tr>
+                                <!-- <tr>
                                     <td>2</td>
                                     <td>
                                         <a href="#" title="Columbus Crew"><img class="img-rounded" src="http://www.moddingway.com/fifadb/teams/l687.png">Columbus Crew</a>
@@ -138,7 +138,7 @@
                                         <a href="#"><img class="img-rounded" src="http://futhead.cursecdn.com/static/img/15/clubs/694.png">Colorado Rapids</a>
                                     </td>
                                     <td>14</td>
-                                </tr>
+                                </tr> -->
                             </tbody>
                         </table>
                     </div>
