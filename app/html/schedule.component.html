@@ -82,13 +82,13 @@
                                 <a [routerLink]="['TeamDetail', {id: match.local.id}]"><img class="img-rounded" src={{match.local.imgescudo}}>{{match.local.fullname}}</a>
                             </td>
                             <td id="result">
-                                <h4>2</h4>
+                                <h4>{{match.resultLocal}}</h4>
                             </td>
                             <td id="result">
                                 <h4>-</h4>
                             </td>
                             <td id="result">
-                                <h4>3</h4>
+                                <h4>{{match.resultVisitor}}</h4>
                             </td>
                             <td>
                                 <a [routerLink]="['TeamDetail', {id: match.visitor.id}]"><img class="img-rounded" src={{match.visitor.imgescudo}}>{{match.visitor.fullname}}</a>
