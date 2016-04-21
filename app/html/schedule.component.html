@@ -79,7 +79,7 @@
                         <tr *ngIf="schedule.id == match.schedule.id">
                             <td id="time"><span>{{match.date}}</span></td>
                             <td>
-                                <a href="#"><img class="img-rounded" src="http://futhead.cursecdn.com/static/img/15/clubs/689.png">New York Red Bulls</a>
+                                <a [routerLink]="['TeamDetail', {id: match.local.id}]"><img class="img-rounded" src={{match.local.imgescudo}}>{{match.local.fullname}}</a>
                             </td>
                             <td id="result">
                                 <h4>2</h4>
@@ -91,7 +91,7 @@
                                 <h4>3</h4>
                             </td>
                             <td>
-                                <a href="#"><img class="img-rounded" src="http://www.moddingway.com/fifadb/teams/l687.png">Columbus Crew</a>
+                                <a [routerLink]="['TeamDetail', {id: match.visitor.id}]"><img class="img-rounded" src={{match.visitor.imgescudo}}>{{match.visitor.fullname}}</a>
                             </td>
                             <td *ngIf="loginService.isLogged">
                               <button (click)="removeMatch(match)">Remove</button>

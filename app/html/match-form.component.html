@@ -31,8 +31,19 @@
 
                                       <div class="col-xs-6">
                                           <p>
-                                              <b>Stadium*:</b>
-                                              <input type='text' class="form-control" name='stadium' placeholder="Stadium" id="stadium"/>
+                                              <b>Local*:</b>
+                                              <select [(ngModel)]="idlocal" name="Position" class="form-control" id="position">
+                                                  <option *ngFor="#team of teams" value={{team.id}}>{{team.fullname}}</option>
+                                              </select>
+                                          </p>
+                                      </div>
+
+                                      <div class="col-xs-6">
+                                          <p>
+                                              <b>Visitor*:</b>
+                                              <select [(ngModel)]="idvisitor" name="Position" class="form-control" id="position">
+                                                  <option *ngFor="#team of teams" value={{team.id}}>{{team.fullname}}</option>
+                                              </select>
                                           </p>
                                       </div>
 
