@@ -21,9 +21,9 @@ export class Player {
 export class PlayerService {
 
   private players = [
-  	new Player(1, 'Pepe', new Team(1, 'New York City',), 'Rodriguez', 'Goalkeeper', 'http://www.onboardlogistics.net/contactenos/bandera-USA.png', "http://footballvita.com/wp-content/uploads/2015/09/didier-drogba.jpg"),
-  	new Player(2, 'Manuel', new Team(2, 'Montreal Impact',), 'Sol', 'Defense', 'http://www.onboardlogistics.net/contactenos/bandera-USA.png', "http://footballvita.com/wp-content/uploads/2015/09/didier-drogba.jpg"),
-  	new Player(3, 'Fer', new Team(3, 'Columbus Crew',), 'Lopez', 'Forward', 'http://www.onboardlogistics.net/contactenos/bandera-USA.png', "http://footballvita.com/wp-content/uploads/2015/09/didier-drogba.jpg"),
+  	new Player(1, 'Cristiano', new Team(1, 'Real Madrid',), 'Ronaldo', 'Forward', 'app/img/Flags/Portugal.png', "app/img/Players/CristianoRonaldo.jpg"),
+  	new Player(2, 'Leo', new Team(2, 'Barcelona',), 'Messi', 'Forward', 'app/img/Argentina.png', "app/img/Players/LeoMessi.jpg"),
+  	new Player(3, 'Alvaro', new Team(3, 'Valencia',), 'Negredo', 'Forward', 'app/img/Flags/Spain.png', "app/img/Players/Negredo.jpg"),
   ];
 
   getPlayers() {

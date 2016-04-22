@@ -26,9 +26,18 @@
     text-align: justify;
 }
 
+.table #imgclasification .img-rounded {
+    width: 40px;
+    margin-right: 10px;
+}
+
 .table .img-rounded {
     width: 40px;
     margin-right: 10px;
+}
+
+.table #imgclasification a{
+  font-size: 18px;
 }
 
 #result {

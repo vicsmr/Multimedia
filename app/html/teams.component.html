@@ -1,7 +1,7 @@
 <div id="principal" class="container">
   <ol id="breadcrumb">
       <li>
-          <a [routerLink]="['Principal']"><img class="img-rounded" src="http://4.bp.blogspot.com/_A0w2msagD40/SSrCvRwW5cI/AAAAAAAACb8/guoEtikOYSc/s1600/imagen_flecha_derecha%5B1%5D.gif">Home</a>
+          <a [routerLink]="['Principal']"><img class="img-rounded" src="app/img/Arrow.gif">Home</a>
       </li>
       <li id="raya">/</li>
       <li id="active">Teams</li>
@@ -10,7 +10,7 @@
       <div class="row">
         <div class="col-md-10 col-sm-10 xs-hidden"></div>
         <div *ngIf="loginService.isLogged" class="col-md-2 col-sm-2 col-xs-12">
-          <button (click)="newTeam()" id="botonAgregar" (click)="gotoFormJugador()"><img src="http://es.downloadicons.net/sites/default/files/agregar-icono-3079.png"> Add Team</button>
+          <button (click)="newTeam()" id="botonAgregar" (click)="gotoFormJugador()"><img src="app/img/Add.png"> Add Team</button>
         </div>
       </div>
       <div class="row">

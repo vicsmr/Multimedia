@@ -1,12 +1,12 @@
 <div id="principal" class="container">
     <div id="cabecera">
         <div id="cabecera1" class="panel-heading">
-            <img src="https://fanart.tv/fanart/movies/9942/hdmovielogo/major-league-51034af92ecc0.png" class="img-circle" width="115" height="75">
+            <img src="app/img/ImgMajorLeague.png" class="img-circle" width="115" height="75">
             <span>Major League Football</span>
         </div>
         <div id="franja" class="panel-body">
             <div id="login" *ngIf="!loginService.isLogged">
-                <img src="https://cdn0.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/user-male-circle-blue-128.png" class="img-circle" alt="Login" width="35" height="35">
+                <img src="app/img/User.png" class="img-circle" alt="Login" width="35" height="35">
                 <div id="loginContainer">
                     <button id="loginButton" data-toggle="modal" data-target="#myModal"><span>Login</span><em></em></button>
                     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
@@ -15,7 +15,7 @@
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                     <div id="inicio-sesion">
-                                        <img src="https://cdn0.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/user-male-circle-blue-128.png" class="img-circle" alt="Login" width="35" height="35">
+                                        <img src="app/img/User.png" class="img-circle" alt="Login" width="35" height="35">
                                         <h4 class="modal-title" id="text-inicio-sesion">Login</h4>
                                     </div>
                                 </div>
@@ -67,7 +67,7 @@
         <div id="navbarCollapse" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li class="active"><a [routerLink]="['Principal']">Home</a></li>
-                <li id="teams"><a [routerLink]="['Teams']">Teams</a>
+                <li id="teamsnav"><a [routerLink]="['Teams']">Teams</a>
                     <ul class="nav navbar-nav hidden-xs">
                         <li *ngFor="#team of teams">
                             <a [routerLink]="['TeamDetail', {id: team.id}]"><img class="img-rounded" src={{team.imgescudo}}> {{team.fullname}}</a>
@@ -108,9 +108,9 @@
                 </div>
                 <div class="col-md-3 btn-group" id="redes">
                     <h3>Social networks:</h3>
-                    <a class="btn" href="https://www.facebook.com/"><img src="http://4.bp.blogspot.com/-LhQsVDBynSI/VX6H1SHyzbI/AAAAAAAAAAc/N6PWXCZg1xs/s215/FacebookURL-128.png" width="50px" height="50px"></a>
-                    <a class="btn" href="https://twitter.com/?lang=es"><img src="https://www.missionmanager.com/wp-content/uploads/2016/03/Twitter-icon.png" width="50px" height="50px"></a>
-                    <a class="btn" href="https://www.instagram.com/"><img src="http://igfollowlike.androidcheatengine.com/img/instagram-icon-32x32.png" width="50px" height="50px"></a>
+                    <a class="btn" href="https://www.facebook.com/"><img src="app/img/Facebook.png" width="50px" height="50px"></a>
+                    <a class="btn" href="https://twitter.com/?lang=es"><img src="app/img/Twitter.png" width="50px" height="50px"></a>
+                    <a class="btn" href="https://www.instagram.com/"><img src="app/img/Instagram.png" width="50px" height="50px"></a>
                 </div>
                 <div class="col-md-3" id="member" align="center">
                     <h3>Designers:</h3>

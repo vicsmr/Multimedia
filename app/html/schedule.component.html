@@ -1,7 +1,7 @@
 <div id="principal" class="container">
         <ol id="breadcrumb">
             <li>
-                <a [routerLink]="['Principal']"><img class="img-rounded" src="http://4.bp.blogspot.com/_A0w2msagD40/SSrCvRwW5cI/AAAAAAAACb8/guoEtikOYSc/s1600/imagen_flecha_derecha%5B1%5D.gif">Home</a>
+                <a [routerLink]="['Principal']"><img class="img-rounded" src="app/img/Arrow.gif">Home</a>
             </li>
             <li id="raya">/</li>
             <li id="active">Schedule: Journey {{schedule.id}}</li>
@@ -9,10 +9,10 @@
         <div class="row">
           <div class="col-md-8 col-sm-8 xs-hidden"></div>
           <div *ngIf="loginService.isLogged" class="col-md-2 col-sm-2 col-xs-12">
-            <button (click)="save()" id="botonAgregar"><img src="http://es.downloadicons.net/sites/default/files/agregar-icono-3079.png"> Add Schedule</button>
+            <button (click)="save()" id="botonAgregar"><img src="app/img/Add.png"> Add Schedule</button>
           </div>
           <div *ngIf="loginService.isLogged" class="col-md-2 col-sm-2 col-xs-12">
-            <button (click)="newMatch()" id="botonAgregar"><img src="http://es.downloadicons.net/sites/default/files/agregar-icono-3079.png"> Add Match</button>
+            <button (click)="newMatch()" id="botonAgregar"><img src="app/img/Add.png"> Add Match</button>
           </div>
         </div>
         <div id="cuerpo">

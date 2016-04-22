@@ -1,7 +1,7 @@
 <div id="principal" class="container">
         <ol id="breadcrumb">
             <li>
-                <a [routerLink]="['Principal']"><img class="img-rounded" src="http://4.bp.blogspot.com/_A0w2msagD40/SSrCvRwW5cI/AAAAAAAACb8/guoEtikOYSc/s1600/imagen_flecha_derecha%5B1%5D.gif">Home</a>
+                <a [routerLink]="['Principal']"><img class="img-rounded" src="app/img/Arrow.gif">Home</a>
             </li>
             <li id="raya">/</li>
             <li id="active">Clasification</li>
@@ -24,10 +24,10 @@
                             </thead>
                             <tbody>
                                 <tr *ngFor="#team of teams; #posicion=index">
-                                    <td> {{posicion + 1}} <img *ngIf = "posicion===0"  class="img-rounded" src="https://images-na.ssl-images-amazon.com/images/I/31QzyOljSGL._SS40_.jpg">
+                                    <td> {{posicion + 1}} <img *ngIf = "posicion===0"  class="img-rounded" src="app/img/Trophy.jpg">
                                     </td>
-                                    <td>
-                                        <a [routerLink]="['TeamDetail', {id: team.id}]"><img src={{team.imgescudo}}> {{team.fullname}}</a>
+                                    <td id="imgclasification">
+                                        <a [routerLink]="['TeamDetail', {id: team.id}]"><img class="img-rounded" src={{team.imgescudo}}> {{team.fullname}}</a>
                                     </td>
                                     <td>{{team.points}}</td>
                                 </tr>
