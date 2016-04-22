@@ -26,3 +26,11 @@
   padding-left: 0px;
   padding-right: 0px;
 }
+
+#columnas img{
+  height: 50px;
+}
+
+#columnas a{
+  font-size: 25px;
+}

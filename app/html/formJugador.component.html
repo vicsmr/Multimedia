@@ -84,22 +84,24 @@
                                     </div>
 
                                     <div class="col-xs-6">
-                                        <form method="post" enctype="multipart/form-data">
+                                        <p>
                                             <b>Image:</b>
-                                            <input type=file size=60 name="file1">
-                                        </form>
-                                        <br>
+                                            <input [(ngModel)]="player.imagePlayer" type='text' class="form-control" name='imagePlayer' placeholder="Player Image" id="imagePlayer" />
+                                        </p>
                                     </div>
+                                    </fieldset>
 
-                                    <div class="col-xs-12">
+                                    <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12">
                                         <p>Items marked with * will be required by the form.</p>
                                     </div>
 
-                                    <div class="col-xs-6">
+                                    <div class="col-xs-12 col-lg-2 col-md-2 col-sm-2">
                                         <input (click)="save()" type='submit' name='enviar' value='Submit' />
                                     </div>
-                                </fieldset>
                             </form>
+                            <div class="col-xs-12 col-lg-10 col-md-10 col-sm-10">
+                                <button (click)="cancel()" name='cancel'>Cancel</button>
+                            </div>
                         </div>
                     </div>
                 </div>

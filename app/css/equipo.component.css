@@ -1,3 +1,11 @@
+.page-header img{
+  height: 50px;
+}
+
+#opcion4 img{
+  height: 180px;
+}
+
 .equipacion {
     margin: 20px;
 }
