@@ -6,6 +6,15 @@
             <li id="raya">/</li>
             <li id="active">Clasification</li>
         </ol>
+        <div class="row">
+          <div class="col-md-9 col-sm-9 xs-hidden"></div>
+          <div *ngIf="loginService.isLogged" class="col-md-1 col-sm-1 col-xs-12">
+            <b>Journey:</b>
+            <select [(ngModel)]="journey" name="visitor" class="form-control" id="visitor">
+                <option *ngFor="#schedule of schedules" value={{schedule.id}}>{{schedule.id}}</option>
+            </select>
+          </div>
+        </div>
         <div id="cuerpo">
             <div class="row">
                 <div class="col-md-7 col-xs-12 col-sm-12">
@@ -13,7 +22,6 @@
                         <div class="panel-heading">
                             <h4>Clasification</h4>
                         </div>
-
                         <table class="table">
                             <thead>
                                 <tr>
@@ -159,25 +167,25 @@
                                     <th>Visitor</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
+                            <tbody *ngFor="#match of matches">
+                                <tr *ngIf="journey == match.schedule.id">
                                     <td>
-                                        <a href="#"><img class="img-rounded" src="http://futhead.cursecdn.com/static/img/15/clubs/689.png">New York Red Bulls</a>
+                                        <a [routerLink]="['TeamDetail', {id: match.local.id}]"><img class="img-rounded" src={{match.local.imgescudo}}>{{match.local.fullname}}</a>
                                     </td>
                                     <td id="result">
-                                        <h4>2</h4>
+                                        <h4>{{match.resultLocal}}</h4>
                                     </td>
                                     <td id="result">
                                         <h4>-</h4>
                                     </td>
                                     <td id="result">
-                                        <h4>3</h4>
+                                        <h4>{{match.resultVisitor}}</h4>
                                     </td>
                                     <td>
-                                        <a href="#"><img class="img-rounded" src="http://www.moddingway.com/fifadb/teams/l687.png">Columbus Crew</a>
+                                        <a [routerLink]="['TeamDetail', {id: match.visitor.id}]"><img class="img-rounded" src={{match.visitor.imgescudo}}>{{match.visitor.fullname}}</a>
                                     </td>
                                 </tr>
-                                <tr>
+                                <!-- <tr>
                                     <td>
                                         <a [routerLink]="['TeamNew']"><img class="img-rounded" src="http://www.bold.dk/img/tag/64x64/758.png">Montreal Impact</a>
                                     </td>
@@ -295,7 +303,7 @@
                                     <td>
                                         <a href="#"><img class="img-rounded" src="http://futhead.cursecdn.com/static/img/15/clubs/694.png">Colorado Rapids</a>
                                     </td>
-                                </tr>
+                                </tr> -->
                             </tbody>
                         </table>
                     </div>
