@@ -1,139 +1,200 @@
 <div id="principal" class="container">
-    <div id="cuerpo">
-        <div id="eslogan">
-            <div class="jumbotron hidden-xs">
-                <h2>Welcome to Major League Football web page</h2>
-                <p>MLF is a football league with American teams. It's one of the most important league in the world.</p>
-            </div>
+    <section id="eslogan">
+        <div class="jumbotron hidden-xs">
+            <h2>WELCOME TO MAJOR LEAGUE FOOTBALL WEBPAGE</h2>
+            <p>MLF is a website where you can add your own team, your players and know all the news about your favorite team.</p>
         </div>
-        <div id="general">
-            <div class="container2">
-                <div class="row">
-                    <div class="col-md-4 col-xs-12 col-sm-6">
-                        <div class="panel panel-info">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Last news</h3>
-                            </div>
-                            <div class="panel-body">
-                                <a [routerLink]="['Schedule2']">Montreal Impact makes official the signing of Alvaro Negredo. The player signs a contract until 2020.<span class="label label-info">10/03/2016</span></a>
-                            </div>
-                            <div class="panel-body">
-                                <a href="#">David Villa said in New York City TV: "We hope to fight for the title this season".<span class="label label-info">09/03/2016</span></a>
-                            </div>
-                            <div class="panel-body">
-                                <a href="#">Fernando Lopez becomes the owner of the franchise Colorado Rapids for 500 million dollars.<span class="label label-info">08/03/2016</span></a>
+    </section>
+    <section id="general">
+        <div class="container">
+            <div class="page-header">
+                <div id="header">
+                    <h3>Participate in our league: <small>On this website you can find information about:</small></h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="panel">
+                        <div class="panel-heading" style="background-color:rgba(59, 145, 229, 0.85)">
+                            <h3><b>Teams</b></h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="col-md-12">
+                                <img src="http://publicdomainvectors.org/photos/soccer.png" class="img-responsive">
+                                <br>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4 hidden-xs hidden-sm">
-                        <div id="carousel-imagenes" class="carousel slide" data-ride="carousel">
-                            Image Gallery
-                            <ol class="carousel-indicators">
-                                <li data-target="#carousel-imagenes" data-slide-to="0" class="active"></li>
-                                <li data-target="#carousel-imagenes" data-slide-to="1"></li>
-                                <li data-target="#carousel-imagenes" data-slide-to="2"></li>
-                            </ol>
-                            <div class="carousel-inner" role="listbox">
-                                <div class="item active">
-                                    <img src="http://estaticos.marca.com/assets/multimedia/imagenes/2016/03/04/14571240291422.jpg" alt="Inicio">
-                                </div>
-                                <div class="item">
-                                    <img src="http://estaticos.marca.com/assets/multimedia/imagenes/2016/03/07/14573104971555.jpg" alt="Celebracion">
-                                </div>
-                                <div class="item">
-                                    <img src="http://futblogfifa.com/wp-content/uploads/2016/01/14528986120570.jpg" alt="Rivales">
-                                </div>
-                            </div>
-                            <a class="left carousel-control" href="#carousel-imagenes" role="button" data-slide="prev">
-                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="right carousel-control" href="#carousel-imagenes" role="button" data-slide="next">
-                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-xs-12 col-sm-6">
-                        <div class="panel panel-info">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Last market movements</h3>
-                            </div>
-                            <div class="panel-body">
-                                <a href="#">Transfers: Alvaro Negredo (Montreal Impact), Jackson Martinez (New York Red Bulls), Víctor Sánchez (Columbus Crew), Gravensen (Colorado Rapids)</a>
-                            </div>
-                            <div class="panel-body">
-                                <a href="#">Sales: Obafemi Martins (Seattle Sounders-Valencia C.F), Nosa Igiebor (Colorado Rapids-Galatasaray), Kaka (Orlando City-Getafe)</a>
-                            </div>
-                            <div class="panel-body">
-                                <a href="#">Rumors: Didier Drogba (Montreal Impact-Real Madrid), Giovinco (Toronto-FC Barcelona)</a>
-                            </div>
+                        <div class="panel-footer" style="background-color:rgba(59, 145, 229, 0.85)">
+                            <h5><b>Enjoy our services and add your own team to the league.</b></h5>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-4 col-sm-4 col-xs-12">
-                        <div class="panel panel-info">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Eastern Conference Teams</h3>
+
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="panel">
+                        <div class="panel-heading" style="background-color:rgba(20, 206, 85, 0.78)">
+                            <h3><b>Football players</b></h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="col-md-12">
+                                <img src="https://image.spreadshirtmedia.net/image-server/v1/designs/15459667,width=178,height=178,version=1385642627/Saksespark-fodbold-fodboldspiller-Bicycle-Kick--.png" class="img-responsive">
+                                <br>
                             </div>
-                            <div class="panel-body">
-                                <img class="img-rounded" src="http://futhead.cursecdn.com/static/img/15/clubs/689.png">
-                                <img class="img-rounded" src="http://www.moddingway.com/fifadb/teams/l687.png">
-                                <img class="img-rounded" src="http://www.bold.dk/img/tag/64x64/758.png">
-                                <img class="img-rounded" src="http://heycdn.thisisfootball.com/wp-content/uploads/2013/09/xUnion-Crest-300x300-64x64.png.pagespeed.ic.HdFRutSXUM.png">
-                            </div>
-                            <div class="panel-body">
-                                <img class="img-rounded" src="http://thisisfootball.dk/wp-content/uploads/2013/09/xchicago-fire-logo-64x64.png.pagespeed.ic.kshhtzY5gF.png">
-                                <img class="img-rounded" src="http://heycdn.thisisfootball.com/wp-content/uploads/2015/03/xorlando-city-sc-64x64.png.pagespeed.ic.I1R3ly18C-.png">
-                                <img class="img-rounded" src="http://futhead.cursecdn.com/static/img/15/clubs/111651.png">
-                                <img class="img-rounded" src="http://www.bold.dk/img/tag/64x64/742.png">
-                            </div>
+                        </div>
+                        <div class="panel-footer" style="background-color:rgba(20, 206, 85, 0.78)">
+                            <h5><b>Become the best football player and lead your team to victory.</b></h5>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-4 col-xs-12">
-                        <div class="panel panel-info">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Matches of the day</h3>
-                            </div>
-                            <div class="panel-body">
-                                <a>Whitecaps-Montreal Impact</a>
-                            </div>
-                            <div class="panel-body">
-                                <a>Portland Timbers-Columbus Crew</a>
+                </div>
+
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="panel">
+                        <div class="panel-heading" style="background-color:rgba(239, 67, 74, 0.78)">
+                            <h3><b>Matches</b></h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="col-md-12">
+                                <img src="http://freeiconbox.com/icon/256/26722.png" class="img-responsive">
+                                <br>
                             </div>
                         </div>
-                        <div class="panel panel-info">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Contact with us</h3>
-                            </div>
-                            <div class="panel-body">
-                                <span class="glyphicon glyphicon-earphone"><a> 917834521 (Fernando)</a></span>
-                                <span class="glyphicon glyphicon-thumbs-up"><a> Major League Football (Facebook)</a></span>
-                            </div>
+                        <div class="panel-footer" style="background-color:rgba(239, 67, 74, 0.78)">
+                            <h5><b>Schedules , results and more about all the teams in our league</b></h5>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-4 col-xs-12">
-                        <div class="panel panel-info">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Western Conference Teams</h3>
+                </div>
+
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="panel">
+                        <div class="panel-heading" style="background-color:rgba(163, 125, 208, 0.94)">
+                            <h3><b>News Forum</b></h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="col-md-12">
+                                <img src="https://image.freepik.com/iconos-gratis/periodico_318-48105.png" class="img-responsive">
+                                <br>
                             </div>
-                            <div class="panel-body">
-                                <img class="img-rounded" src="http://heycdn.thisisfootball.com/wp-content/uploads/2013/09/xfc-dallas-logo-64x64.png.pagespeed.ic.7Z29WTYJC9.png">
-                                <img class="img-rounded" src="http://footytweets.com/images/team_logos/130.png">
-                                <img class="img-rounded" src="http://adn.fcupdate.nl/clubs/medium/28996.png">
-                                <img class="img-rounded" src="http://heycdn.thisisfootball.com/wp-content/uploads/2013/09/xPortland_Timbers_MLS_logo.svg_1-64x64.png.pagespeed.ic.V99pB6RgY3.png">
-                            </div>
-                            <div class="panel-body">
-                                <img class="img-rounded" src="http://heycdn.thisisfootball.com/wp-content/uploads/2013/09/xsan-jose-earthquakes-logo-64x64.png.pagespeed.ic.Ep5PkwAkfG.png">
-                                <img class="img-rounded" src="http://heycdn.thisisfootball.com/wp-content/uploads/2013/09/xvancouver-whitecaps-fc-hd-logo-64x64.png.pagespeed.ic.ulCgt0bJ9G.png">
-                                <img class="img-rounded" src="http://static.oddschecker.com/content/team-badges/football/1763.png?v=11.0.0">
-                                <img class="img-rounded" src="http://futhead.cursecdn.com/static/img/15/clubs/694.png">
-                            </div>
+                        </div>
+                        <div class="panel-footer" style="background-color:rgba(163, 125, 208, 0.94)">
+                            <h5><b>Add and read news about your team and your players.</b></h5>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+    <section id="players" class="hidden-xs">
+        <div class="container">
+            <div class="page-header">
+                <div id="header2">
+                    <h3>Some of players in our league: <small>Become one of the them</small></h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <img src="http://img.uefa.com/imgml/TP/players/1/2015/324x324/70482.jpg" class="img-circle">
+                            <ul>
+                                <li><b>Name:</b>Didier Drogba</li>
+                                <li><b>Team:</b>Montreal Impact</li>
+                                <li><b>Age:</b>38</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <img src="http://img.uefa.com/imgml/TP/players/1/2016/324x324/95803.jpg" class="img-circle">
+                            <ul>
+                                <li><b>Name:</b>Lionel Messi</li>
+                                <li><b>Team:</b>FC Barcelona</li>
+                                <li><b>Age:</b>28</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <img src="http://img.uefa.com/imgml/TP/players/1/2016/324x324/63706.jpg" class="img-circle">
+                            <ul>
+                                <li><b>Name:</b>Cristiano Ronaldo</li>
+                                <li><b>Team:</b>Real Madrid</li>
+                                <li><b>Age:</b>31</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <img src="http://img.uefa.com/imgml/TP/players/1/2016/324x324/101672.jpg" class="img-circle">
+                            <ul>
+                                <li><b>Name:</b>Alvaro Negredo</li>
+                                <li><b>Team:</b>Valencia CF</li>
+                                <li><b>Age:</b>30</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="teams" class="hidden-xs">
+        <div class="container">
+            <div class="page-header">
+                <div id="header">
+                    <h3>Some of teams in our league: <small>Turn your football team in one of these.</small></h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <img src="http://as01.epimg.net/img/comunes/fotos/fichas/equipos/large/17.png" class="img-circle">
+                            <ul>
+                                <li><b>Name:</b>Valencia C.F</li>
+                                <li><b>Coach:</b>Pako Ayestaran</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <img src="http://3.bp.blogspot.com/-W28WNiqbNWk/VeU61TwEbWI/AAAAAAAAAho/fcj9ExtJzdE/s1600/Montreal%2BImpact%2BFC.png" class="img-circle">
+                            <ul>
+                                <li><b>Name:</b>Montreal Impact</li>
+                                <li><b>Coach:</b>Mauro Biello</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <img src="http://4.bp.blogspot.com/-vB9Ip3l-blE/VeU65PBAaKI/AAAAAAAAAiE/OKRRuXC0-ww/s1600/New%2BYork%2BRed%2BBulls.png" class="img-circle">
+                            <ul>
+                                <li><b>Name:</b>New York Red Bulls</li>
+                                <li><b>Coach:</b>Jesse Marsch</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <img src="http://as01.epimg.net/img/comunes/fotos/fichas/equipos/large/91.png" class="img-circle">
+                            <ul>
+                                <li><b>Name:</b>Cadiz C.F</li>
+                                <li><b>Coach:</b>Alvaro Cervera</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>

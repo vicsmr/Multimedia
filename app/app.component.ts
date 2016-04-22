@@ -1,7 +1,5 @@
 import {Component, OnInit} from 'angular2/core';
 import {RouteConfig, RouteParams, Router, ROUTER_DIRECTIVES} from 'angular2/router';
-import {HeaderComponent} from './header.component';
-import {FooterComponent} from './footer.component';
 import {ClasificationComponent} from './clasification.component';
 import {TeamsComponent} from './teams.component';
 import {Schedule1Component} from './schedule1.component';
@@ -26,7 +24,7 @@ import {MatchFormComponent} from './match-form.component';
 	selector: 'app',
 	templateUrl: 'app/html/app.component.html',
 	providers: [LoginService, TeamService, PlayerService, ScheduleService, MatchService],
-  directives: [HeaderComponent, FooterComponent, ROUTER_DIRECTIVES],
+  directives: [ROUTER_DIRECTIVES],
 })
 
 @RouteConfig([
