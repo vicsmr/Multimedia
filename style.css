@@ -19,7 +19,7 @@
 
 body {
     margin: 10px;
-    background-image: url(http://www.bastida.biz/WebRoot/StoreES3/Shops/eb7627/4C4F/D4D5/A7AB/1277/8606/D94C/9B1E/E94E/04092gsalmon.jpg);
+    background-image: url(app/img/Background.jpg);
 }
 
 #principal {
@@ -119,7 +119,7 @@ body {
     width: 30.0em;
 }
 
-#teams>ul>li {
+#teamsnav>ul>li {
     background-color: #211f1f;
     border-bottom: 2px solid #c6c6c6;
     border-left: 2px solid #c6c6c6;
@@ -127,12 +127,16 @@ body {
     width: 200px;
 }
 
-#teams>ul>li>a {
+#teamsnav>ul>li>a {
     text-decoration: none;
     padding: 4px 6px 4px 13px;
     font-weight: bold;
     display: block;
     text-align: justify;
+}
+
+#teamsnav img{
+  height: 28px;
 }
 
 #rounded1 {
