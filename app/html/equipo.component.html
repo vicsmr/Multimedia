@@ -1,0 +1,262 @@
+<div id="principal" class="container">
+  <ol id="breadcrumb">
+      <li>
+          <a [routerLink]="['Principal']"><img class="img-rounded" src="app/img/Arrow.gif">Home</a>
+      </li>
+      <li id="raya">/</li>
+      <li><a [routerLink]="['Teams']">Teams</a>
+      </li>
+      <li id="raya">/</li>
+      <li id="active">{{team.fullname}}</li>
+  </ol>
+  <div id="cuerpo">
+      <div class="row">
+          <div class="col-md-10 col-sm-10 col-xs-12">
+              <div class="page-header">
+                  <h1>Information about teams: <small>{{team.fullname}}</small> <img src="{{team.imgescudo}}"></h1>
+              </div>
+          </div>
+          <div *ngIf="loginService.isLogged" class="col-md-2 col-sm-2 col-xs-12">
+            <button id="botonAgregar" (click)="newPlayer()"><img src="app/img/Add.png"> Add Player</button>
+          </div>
+      </div>
+      <div class="container">
+          <div class="row">
+              <div class="col-md-3 col-sm-4 hidden-xs">
+                  <img class="img-responsive" src="{{team.imgequipo}}" alt="Drogba" width="600" height="450">
+              </div>
+              <div class="col-md-9 col-sm-8">
+                  <div id="texto">
+                      <h2>{{team.fullname}}</h2>
+                      <p>
+                          {{team.description}}
+                      </p>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div id="botonesdeCammbio">
+          <button type="button" class="btn btn-success" onclick="mostrar(1)">Players/Staff</button>
+          <button type="button" class="btn btn-success" onclick="mostrar(2)">History</button>
+          <button type="button" class="btn btn-success" onclick="mostrar(3)">Leading scorer</button>
+          <button type="button" class="btn btn-success" onclick="mostrar(4)">
+              Equipement</button>
+          <button type="button" class="btn btn-success" onclick="mostrar(5)">Trophy Room</button>
+      </div>
+      <div id="opcion1">
+          <div class="container2">
+              <div class="row">
+                  <div class="col-md-8 col-sm-8 col-xs-12">
+                      <h3>Players of {{team.fullname}}</h3>
+                      <table class="table table-bordered">
+                          <thead>
+                              <tr>
+                                  <th>Name</th>
+                                  <th>Lastname</th>
+                                  <th>Position</th>
+                                  <th>Nacionality</th>
+                              </tr>
+                          </thead>
+                          <tbody *ngFor="#player of players">
+                              <tr *ngIf="team.id == player.equipo.id">
+                                <td><a [routerLink]="['PlayerDetail', {id: player.id}]">{{player.name}}</a></td>
+                                <td><a [routerLink]="['PlayerDetail', {id: player.id}]">{{player.lastname}}</a></td>
+                                <td>{{player.position}}</td>
+                                <td><img src={{player.nacionality}}></td>
+                              </tr>
+                              <!-- <tr>
+                                  <td>Evan</td>
+                                  <td>Bush</td>
+                                  <td>Goalkeeper</td>
+                                  <td><img src="http://www.onboardlogistics.net/contactenos/bandera-USA.png">
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>Ambroise</td>
+                                  <td>Oyongo</td>
+                                  <td>Defense</td>
+                                  <td><img src="http://aguitech.com/images/Iconos/FlagsWorld/Cameroon.png">
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>Hassoun</td>
+                                  <td>Camara</td>
+                                  <td>Defense</td>
+                                  <td><img src="http://www.rhtacticboards.com/img/fr.png">
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>Patrice</td>
+                                  <td>Bernier <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/L%C3%ADnea_C_(SBASE).svg/200px-L%C3%ADnea_C_(SBASE).svg.png">
+                                  </td>
+                                  <td>Midfield</td>
+                                  <td><img src="http://www.caracas2013.com/CAN.png">
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td><a [routerLink]="['Jugador']">Didier</a>
+                                  </td>
+                                  <td><a [routerLink]="['Jugador']">Drogba</a>
+                                  </td>
+                                  <td>Forward</td>
+                                  <td><img src="http://ohla.tv/uploads/3/4/7/5/34759513/9999192_orig.png">
+                                  </td>
+                              </tr> -->
+                          </tbody>
+                      </table>
+                  </div>
+                  <div class="col-md-4 col-sm-4 col-xs-12">
+                      <h3>Coaching staff of {{team.fullname}}</h3>
+                      <table class="table table-bordered">
+                          <thead>
+                              <tr>
+                                  <th>Name</th>
+                                  <th>Lastname</th>
+                                  <th>Job</th>
+                                  <th>Nacionality</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td>Mauro</td>
+                                  <td>Biello</td>
+                                  <td>Coach</td>
+                                  <td><img src="http://www.caracas2013.com/CAN.png">
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>Philippe</td>
+                                  <td>Eullafroy</td>
+                                  <td>Delegate</td>
+                                  <td><img src="http://www.rhtacticboards.com/img/fr.png">
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>Mike</td>
+                                  <td>Sorber</td>
+                                  <td>Delegate</td>
+                                  <td><img src="http://www.onboardlogistics.net/contactenos/bandera-USA.png">
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>Paolo</td>
+                                  <td>Pacione</td>
+                                  <td>Physiotherapist</td>
+                                  <td><img src="http://www.caracas2013.com/CAN.png">
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>Youssef</td>
+                                  <td>Dahha</td>
+                                  <td>Goalkeeper Coach</td>
+                                  <td><img src="http://images.vectorhq.com/images/previews/5c4/moroccan-flag-circle-psd-452658.png">
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div id="opcion2" style="display:none;">
+          <h1>History, <small>of {{team.fullname}}</small></h1>
+          <p class="text-justify">{{team.history}}</p>
+      </div>
+      <div id="opcion3" style="display:none;">
+          <div class="container2">
+              <div class="row">
+                  <div class="col-md-8 col-xs-6">
+                      <h3>Leading scorer of {{team.fullname}}</h3>
+                      <table class="table table-bordered">
+                          <thead>
+                              <tr>
+                                  <th>Goals</th>
+                                  <th>Name</th>
+                                  <th>LastName</th>
+                                  <th>Nacionality</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td>Evan</td>
+                                  <td>Bush</td>
+                                  <td>Goalkeeper</td>
+                                  <td><img src="http://www.onboardlogistics.net/contactenos/bandera-USA.png">
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>Ambroise</td>
+                                  <td>Oyongo</td>
+                                  <td>Defense</td>
+                                  <td><img src="http://aguitech.com/images/Iconos/FlagsWorld/Cameroon.png">
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>Hassoun</td>
+                                  <td>Camara</td>
+                                  <td>Defense</td>
+                                  <td><img src="http://www.rhtacticboards.com/img/fr.png">
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>Patrice</td>
+                                  <td>Bernier <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/L%C3%ADnea_C_(SBASE).svg/200px-L%C3%ADnea_C_(SBASE).svg.png">
+                                  </td>
+                                  <td>Midfield</td>
+                                  <td><img src="http://www.caracas2013.com/CAN.png">
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>Didier</td>
+                                  <td>Drogba</td>
+                                  <td>Forward</td>
+                                  <td><img src="http://ohla.tv/uploads/3/4/7/5/34759513/9999192_orig.png">
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div id="opcion4" style="display:none;">
+          <div class="equipacion">
+              <img src={{team.imgequipment}}>
+          </div>
+      </div>
+      <div id="opcion5" style="display:none;">
+          <div class="col-md-4 col-sm-6 col-xs-6">
+              <div id="trophies">
+                  <h2>Trophies</h2>
+                  <div class="panel panel-info">
+                      <div class="panel-heading">
+                          <h3 class="panel-title">Some Honours Individual</h3>
+                      </div>
+                      <div class="panel-body">
+                          <ul>
+                              <li>A-League/USL: 2004, 2009.</li>
+                              <li>American Professional Soccer League (APSL): 1994</li>
+                              <li>Commissioner's Cup (5): 1995, 1996, 1997, 2005, 2006 .</li>
+                              <li>División Noreste (2): 1997, 2003.</li>
+                              <li>División Este: 2004.</li>
+                              <li>Campeonato Canadiense de Fútbol (3): 2008, 2013, 2014.</li>
+                              <li>Copa Voyageurs (9): 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2013, 2014.</li>
+                              <li>Can Am Cup: 1998, 2003, 2004.)</li>
+                              <li>Montreal Cup: 2001.</li>
+                              <li>Walt Disney World Pro Soccer Classic (1): 2013.</li>
+                              <li>Subcampeón de la Concacaf Liga Campeones (1): 2014-15.</li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<p *ngIf="loginService.isLogged">
+
+    <button (click)="removeTeam()">Remove</button>
+    <button (click)="editTeam()">Edit</button>
+    <br>
+
+</p>
